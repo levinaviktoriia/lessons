@@ -1,0 +1,92 @@
+/* Скидання стилів */
+@import url("reset.css");
+
+
+
+/* Основні стилі */
+* {
+	color: #fedb01;
+}
+div p {
+	color: #fff;
+}
+
+/* ----------------------HEADER------------------------ */
+
+h1.title {
+	color: #013d72;
+}
+.header__text mark {
+	color: #013d72;
+}
+.header__text a {
+	color: #ff0000;
+}
+.header__text p {
+	color: #00bb19;
+}
+
+.menu__list {
+	padding: 0px 0px 0px 25px;
+}
+.menu__list li {
+	color: #fedb01;
+	list-style-type: disc;
+}
+.menu__link {
+	color: #013d72;
+}
+
+/* ------------------------MAIN------------------------ */
+
+.block li {
+	color: #0093c8;
+}
+.block__title {
+	color: #ff0000;
+}
+.block__text > p {
+	color: #9fd000;
+}
+.block.shops-block li {
+	color: #e6b98e;
+}
+#design p {
+	color: #00ccff;
+}
+.products-block .block__text > p {
+	color: #00ffe1;
+}
+.products-block {
+}
+.products-block__content > h6 {
+	color: #013d72;
+}
+.products-block__title ~ p {
+	color: #db560f;
+}
+.products-block__text + ul > li {
+	color: #00f36d;
+}
+.facts-block li {
+	color: #ff00ea;
+}
+
+#structure p,
+#activity p {
+	color: #ad8124;
+}
+
+
+/* ----------------------FOOTER---------------------- */
+
+.footer *{
+	background-color: #fedb01;
+	color: #000;
+}
+.footer__title {
+	color: violet;
+}
+[class*="footer__title"] {
+	color: #013d72;
+}
