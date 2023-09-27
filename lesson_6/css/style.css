@@ -1,0 +1,197 @@
+/* ========================= ШРИФТИ =============================== */
+
+/*------------------- Підключення шрифтів ------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Poppins:600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Text:regular&display=swap");
+
+/* Підключення вручну */
+
+
+/* Скидання стилів */
+@import url('reset.css');
+
+
+/* Основні стилі */
+body{
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+}
+
+/* HEADER======================================================================= */
+.header {
+	padding: 50px 0;
+	text-align: center;
+	font-family: "DM Serif Text", sans-serif;
+	color: #0E333D;
+	background-color: #fbeadb;
+}
+.container {
+	max-width: 1190px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.header__title {
+	font-size: 60px;
+	margin: 0px 0px 25px 0px;
+	letter-spacing: 3px;
+}
+.header__subtitle {
+	font-size: 45px;
+}
+
+/* Consulting=================================================================== */
+.consulting {
+	padding: 100px 0 100px;
+	color: #7D7D7D;
+}
+.consulting__container {
+	max-width: 712px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.content__img {
+	margin: 0px 0px 37px 0px;
+}
+.content__img img{
+	width: 100%;
+}
+.content__block {
+	margin: 0px 0px 40px 0px;
+}
+.content__title,
+.content__subtitle,
+.benefits__title,
+.benefits__text {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	line-height: 1.27;
+}
+.content__title {
+	color: #37393F;
+	font-size: 30px;
+	text-transform: capitalize;
+	margin: 0px 0px 10px 0px;
+}
+.content__text p{
+	text-align: justify;
+	line-height: 1.46;
+}
+.content__subtitle {
+	color: #6B77E5;
+	font-size: 20px;
+	margin: 0px 0px 12px 0px;
+}
+
+
+.benefits {
+	font-size: 0;
+	text-align: center;
+}
+.benefits__column {
+	vertical-align: top;
+	display: inline-block;
+	max-width: 331px;
+	text-align: left;
+}
+.benefits__img {
+	width: 100%;
+}
+.benefits__column_mr{
+	margin: 0px 30px 0px 0px;
+}
+.benefits__title {
+	font-size: 25px;
+	color: #37393F;
+	margin: 0px 0px 15px 0px;
+}
+.benefits__text {
+	color: #40DDB6;
+	font-size: 20px;
+	margin: 0px 0px 20px 0px;
+}
+.benefits__list {
+	padding: 0px 0px 0px 35px;
+}
+.benefits__item{
+	font-size: 18px;
+	list-style: unset;
+}
+.benefits__item:not(:last-child) {
+	margin: 0px 0px 35px 0px;
+}
+
+
+
+/* Jewellery=================================================================== */
+
+.jewellery {
+	background-color: #FFF9F4;
+	padding: 100px 0 100px;
+}
+.jewellery__container {
+	max-width: 1190px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.jewellery__row{
+	font-size: 0;
+	text-align: center;
+}
+.jewellery__content{
+	max-width: 563px;
+	margin: 0px 38px 30px 0px;
+	text-align: left;
+}
+.jewellery__content,
+.jewellery__images{
+	display: inline-block;
+	vertical-align: top;
+}
+.jewellery__subtitle {
+	color: #D06B00;
+	font-size: 28px;
+	line-height: 1.21; /* 34/28 */
+	margin: 0px 0px 13px 0px;
+}
+.jewellery__title {
+	font-family: "DM Serif Text", sans-serif;
+	color: #0E333D;
+	font-size: 59px;
+	line-height: 1.46;
+	margin: 0px 0px 25px 0px;
+}
+.jewellery__text p{
+	color: #474747;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.8;
+}
+.jewellery__images{
+	max-width: 568px;
+}
+.jewellery__images img + img{
+	margin: 0px 0px 0px 22px;
+}
+
+/* FOOTER================================================================= */
+.footer {
+	padding: 50px 0;
+	color: #0E333D;
+	background-color: #fbeadb;
+	text-align: center;
+}
+.footer__title {
+	font-family: "DM Serif Text", sans-serif;
+	font-size: 30px;
+	text-decoration: underline;
+	margin: 0px 0px 20px 0px;
+}
+
+.footer__list li:not(:last-child){
+	margin: 0px 0px 10px 0px;
+}
+
+.footer__link {
+	font-size: 20px;
+}
