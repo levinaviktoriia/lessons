@@ -133,11 +133,6 @@ body{
 	background-color: #FFF9F4;
 	padding: 100px 0 100px;
 }
-.jewellery__container {
-	max-width: 1190px;
-	padding: 0 10px;
-	margin: 0 auto;
-}
 .jewellery__row{
 	font-size: 0;
 	text-align: center;
