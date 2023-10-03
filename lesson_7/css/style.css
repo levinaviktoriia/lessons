@@ -1,0 +1,457 @@
+/* ========================= ШРИФТИ =============================== */
+/*------------------- Підключення шрифтів ------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Infant:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
+
+/* Підключення вручну */
+@import url("font.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+
+body {
+	font-size: 18px;
+}
+
+/* HEADER================================================================ */
+.header {
+	background-color: rgba(213, 209, 209, 0.473);
+	padding: 60px 0;
+	text-align: center;
+	color: #000;
+	border-bottom: 1px solid;
+	box-shadow:
+		inset 5px 5px 100px 1px #909090,
+		5px 5px 15px 1px #909090;
+}
+.container {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.header__title {
+	font-family: "Core Sans C", sans-serif;
+	font-weight: 600;
+	font-size: 60px;
+	line-height: 1.2;
+	margin: 0px 0px 20px 0px;
+}
+.header__subtitle {
+	font-family: "Causten", sans-serif;
+	font-size: 40px;
+	line-height: 1.2;
+}
+.header__subtitle span {
+	display: block;
+	font-weight: 700;
+}
+
+/* MAIN================================================================ */
+
+.clothing,
+.licencing,
+.information,
+.practice {
+	padding: 75px 0;
+}
+
+/* ================================================================ */
+
+.jewellery {
+	font-family: "Cormorant Infant", serif;
+	font-weight: 700;
+	color: #606060;
+	padding: 75px 0 94px;
+}
+.jewellery__container {
+	max-width: 1123px;
+	margin: 0 auto;
+	padding: 0 10px;
+	font-size: 0;
+}
+.jewellery__content {
+	max-width: 503px;
+	margin: 0px 85px 0px 0px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.jewellery__subtitle {
+	color: #d58417;
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: 1;
+	margin: 0px 0px 27px 0px;
+}
+.jewellery__title {
+	color: #000;
+	text-transform: capitalize;
+	font-size: 64px;
+	line-height: 1;
+	margin: 0px 0px 31px 0px;
+}
+.jewellery__text p {
+	line-height: 1.4;
+	font-size: 30px;
+}
+.jewellery__images {
+	display: inline-block;
+}
+.jewellery__image {
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 235px;
+	border: 1px solid #502203;
+}
+.jewellery__image img {
+	border-radius: 235px;
+}
+.jewellery__content + .jewellery__image {
+	width: 177px;
+	height: 336px;
+}
+.jewellery__img-01 {
+	margin: 14px 0px 0px -10px;
+}
+
+.jewellery__image + .jewellery__image {
+	width: 307px;
+	height: 500px;
+	margin: 0px 0px 0px 30px;
+}
+.jewellery__img-02 {
+	margin: 19px 0px 0px -11px;
+}
+
+/* ================================================================ */
+
+.clothing {
+	font-family: "Causten", sans-serif;
+	color: #807d7e;
+	font-size: 20px;
+}
+.clothing__container {
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.clothing__title {
+	color: #3c4242;
+	font-family: "Core Sans C", sans-serif;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.2; /* 119.643% */
+	letter-spacing: 0.56px;
+	margin: 0px 0px 30px 0px;
+}
+.clothing__title span {
+	display: inline-block;
+	width: 6px;
+	height: 28px;
+	border-radius: 10px;
+	background: #8a33fd;
+	margin: 0px 15px 0px 0px;
+}
+.clothing__block {
+	padding: 0px 0px 0px 21px;
+}
+.clothing__subtitle {
+	color: #807d7e;
+	font-family: "Core Sans C", sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.67; /* 167.5% */
+	letter-spacing: 0.4px;
+	margin: 0px 0px 25px 0px;
+}
+.clothing__text {
+	margin: 0px 0px 25px 0px;
+}
+.clothing__text p {
+	line-height: 1.67;
+	letter-spacing: 0.4px;
+}
+.clothing__text span {
+	font-weight: 700;
+}
+.clothing__text p:not(:last-child) {
+	margin: 0px 0px 20px 0px;
+}
+.clothing__link {
+	color: #807d7e;
+	font-family: "Core Sans C", sans-serif;
+	font-weight: 600;
+	line-height: 1.67; /* 167.5% */
+	letter-spacing: 0.4px;
+}
+.clothing__link:hover {
+	border-bottom: 1px solid #807d7e;
+}
+
+/* ================================================================ */
+.licencing,
+.information {
+	font-family: "Inter", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: #7d7d7d;
+}
+
+.information__container {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 10px;
+	font-size: 0;
+}
+
+.information__sidebar {
+	width: 360px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px 30px 0px 0px;
+}
+.information__details {
+	background-color: #40ddb6;
+	padding: 24px 34px 24px 34px;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 1.27;
+}
+.list-information {
+	background-color: #f4f4f4;
+	padding: 37px;
+}
+.list-information li {
+	font-size: 18px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #c5c5c5;
+}
+.list-information li:not(:last-child) {
+	margin: 0px 0px 15px 0px;
+}
+.list-information__title {
+	color: #37393f;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	line-height: 1.5;
+}
+.list-information__text {
+	color: #7d7d7d;
+	font-family: "Inter";
+	font-size: 18px;
+	line-height: 1.22;
+}
+
+.information__content {
+	max-width: 830px;
+	display: inline-block;
+}
+.information__title {
+	color: #37393f;
+	font-family: Poppins;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.27;
+	margin-bottom: 13px;
+}
+.information__text * {
+	line-height: 1.46;
+	font-size: 18px;
+}
+.information__text > *:not(:last-child) {
+	margin-bottom: 35px;
+}
+.information__text ul,
+.information__text ol {
+	font-weight: 500;
+	padding: 0px 0px 0px 44px;
+}
+.information__text li {
+	margin: 0px 0px 30px 0px;
+	list-style: unset;
+}
+.information__text ol > li {
+	list-style: decimal-leading-zero;
+}
+
+/* ================================================================ */
+.licencing__container {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.licencing__footnote {
+	color: #37393f;
+	font-weight: 500;
+	line-height: 1.21;
+	text-align: center;
+	margin: 0px 0px 16px 0px;
+}
+.licencing__footnote span {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-color: #40ddb6;
+}
+.licencing__title {
+	color: #37393f;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 1.21;
+	margin: 0px 0px 70px 0px;
+}
+.licencing__container .block-licencing:not(:last-child) {
+	margin: 0px 0px 100px 0px;
+}
+.block-licencing .block-licencing__row:not(:last-child) {
+	margin: 0px 0px 25px 0px;
+}
+.block-licencing__title {
+	color: #37393f;
+	font-family: "Poppins", sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.21;
+	margin: 0px 0px 11px 0px;
+}
+.block-licencing__text p {
+	line-height: 1.46;
+}
+.block-licencing__text a {
+	color: #40ddb6;
+	font-weight: 500;
+}
+.block-licencing__text a:hover {
+	border-bottom: 1px solid #40ddb6;
+}
+.block-licencing__subtitle {
+	color: #37393f;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 1.5;
+	margin: 0px 0px 8px 0px;
+}
+.block-licencing__subtitle span {
+	color: #40ddb6;
+	font-weight: 400;
+}
+.block-licencing__text_turq {
+	color: #40ddb6;
+}
+
+/* practice================================================================ */
+
+.practice {
+}
+.container {
+}
+.practice__title {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 1.22;
+	text-align: center;
+	margin: 0px 0px 30px 0px;
+}
+.practice__subtitle {
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+	line-height: 1.22;
+	margin: 0px 0px 20px 0px;
+}
+.practice__subtitle span {
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #8a33fd;
+	border-radius: 50%;
+	height: 12px;
+	width: 12px;
+	margin: 0px 10px 0px 0px;
+}
+.practice__border,
+.practice__border-radius,
+.practice__outline,
+.practice__box-shadow,
+.practice__opacity,
+.practice__visibility {
+	border: 1px solid;
+	max-width: 270px;
+	margin: 0 auto 30px;
+	padding: 25px;
+	text-align: justify;
+	font-family: "Inter", sans-serif;
+}
+.practice__border {
+	border-top: 6px dotted #40ddb6;
+	border-right: 8px double #606060;
+	border-bottom: 2px dashed #8a33fd;
+	border-left: 2px solid #000;
+}
+.practice__border-radius {
+	border-radius: 10px 30%;
+}
+
+.practice__outline {
+	outline: 10px dashed #40ddb6;
+}
+.practice__box-shadow {
+	box-shadow:
+		10px 5px 10px 3px #4f4f4f,
+		inset 0px 0px 5px 1px #7d7d7d;
+}
+.practice__list {
+	padding: 0px 0px 0px 50px;
+	margin: 0px 0px 10px 0px;
+}
+.practice__list li {
+	list-style: square;
+	font-family: "Inter", sans-serif;
+}
+.practice__opacity {
+	max-width: 800px;
+}
+.practice__opacity p,
+.practice__visibility p {
+	margin-bottom: 10px;
+}
+.practice__opacity p:first-child {
+	opacity: 1;
+}
+.practice__opacity > p > span {
+	opacity: 1;
+}
+.practice__opacity p:nth-child(2) {
+	opacity: 0;
+}
+.practice__opacity p:last-child {
+	opacity: 0.3;
+}
+.practice__visibility {
+	max-width: 800px;
+}
+
+.practice__visibility p:first-child {
+	visibility: hidden;
+}
+.practice__visibility p:last-child {
+	visibility: visible;
+}
+
+.footer {
+	background-color: rgba(213, 209, 209, 0.473);
+	padding: 60px 0;
+	text-align: center;
+	color: #000;
+	border-top: 1px solid;
+	box-shadow: inset 5px 5px 100px 1px #909090;
+	font-family: "Causten", sans-serif;
+}
