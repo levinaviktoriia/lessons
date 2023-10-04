@@ -10,7 +10,13 @@
 /* Скидання стилів */
 @import url("reset.css");
 
+/* Основні стилі */
 
+.container {
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
 
 /* HEADER================================================================ */
 .header {
@@ -22,11 +28,6 @@
 	box-shadow:
 		inset 5px 5px 100px 1px #909090,
 		5px 5px 15px 1px #909090;
-}
-.container {
-	max-width: 1240px;
-	margin: 0 auto;
-	padding: 0 10px;
 }
 .header__title {
 	font-family: "Core Sans C", sans-serif;
@@ -346,10 +347,6 @@
 
 /* practice================================================================ */
 
-.practice {
-}
-.container {
-}
 .practice__title {
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
