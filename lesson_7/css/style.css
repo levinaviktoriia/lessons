@@ -94,9 +94,6 @@
 	line-height: 1.4;
 	font-size: 30px;
 }
-.jewellery__images {
-	display: inline-block;
-}
 .jewellery__image {
 	display: inline-block;
 	vertical-align: middle;
@@ -239,7 +236,7 @@
 }
 .list-information__text {
 	color: #7d7d7d;
-	font-family: "Inter";
+	font-family: "Inter", sans-serif;
 	font-size: 18px;
 	line-height: 1.22;
 }
