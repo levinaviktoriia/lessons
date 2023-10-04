@@ -268,11 +268,14 @@
 .information__text li {
 	list-style: unset;
 }
+.information__text ol > li {
+	list-style: decimal-leading-zero;
+}
 .information__text li:not(:last-child){
 	margin: 0px 0px 30px 0px;
 }
-.information__text ol > li {
-	list-style: decimal-leading-zero;
+.information__text-block p:not(:last-child){
+	margin: 0px 0px 24px 0px;
 }
 
 /* ================================================================ */
