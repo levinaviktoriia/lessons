@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Lesson 9 - Practice</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">			
+			<h1 class="header__title">Lesson №9</h1>
+			<h3 class="header__subtitle">
+				Pseudo-classes and pseudo-elements
+			</h3>
+			<ul class="header__list">
+				<li><a class="header__link" href="index.html">Main</a></li>
+				<li><a class="header__link" href="#">Practice</a></li>
+				<li><a class="header__link" href="game.html">Game "Snake"</a></li>
+			</ul>
+		</div>
+	</header>
+	<main class="main">
+		<div class="practice">
+			<div class="practice__container">
+				<h2 class="practice__title">Practice</h2>
+				<div class="practice__text">
+					<p>За допомогою псевдокласу <mark>:target</mark> виконано всі наступні блоки з прикладами.</p>
+					<p>Початкові властивості блоку з прикладом:</p>
+					<p>.practice__content {display: none; ...}</p>
+					<p>При натисканні на посилання на блок з контентом спрацьовує псевдоклас <mark>:target</mark> і застосовуються властивості: </p>
+					<p>.practice__content:target {display: block;} </p>
+				</div>
+				<div class="practice__block">
+					<div class="practice__row">
+						<a class="practice__link" href="#block-01">:hover (hover over an object)</a>
+						<a class="practice__link-hide" href="#">Hide</a>
+					</div>
+					<div class="practice__content block-01" id="block-01">
+						<p class="block-01__item-01">Paragraph</p>
+						<a class="block-01__item-02" href="#">Link</a>
+						<img class="block-01__item-03" src="img/cat.jpg" alt="Cat graphic">
+					</div>
+				</div>
+				<div class="practice__block">
+					<div class="practice__row">
+						<a class="practice__link" href="#block-02">:active (click on the object)</a>
+						<a class="practice__link-hide" href="#">Hide</a>
+					</div>
+					<div class="practice__content block-02" id="block-02">
+						<p class="block-02__item-01">Paragraph</p>
+						<a class="block-02__item-02" href="#">Link</a>
+						<img class="block-02__item-03" src="img/cat.jpg" alt="Cat graphic">
+					</div>
+				</div>
+				<div class="practice__block">
+					<div class="practice__row">
+						<a class="practice__link" href="#block-03">:visited (visit link)</a>
+						<a class="practice__link-hide" href="#">Hide</a>
+					</div>
+					<div class="practice__content block-03" id="block-03">
+						<a class="block-03__item-01" href="#">Link - 1</a>
+						<a class="block-03__item-02" href="#">Link - 2</a>
+						<p class="practice__text">До першого посилання застосован псевдокласс :visited, а до другого - ні.</p>
+					</div>
+				</div>
+				<div class="practice__block">
+					<div class="practice__row">
+						<a class="practice__link" href="#block-04">:focus (click <mark>Tab</mark>)</a>
+						<a class="practice__link-hide" href="#">Hide</a>
+					</div>
+					<div class="practice__content block-04" id="block-04">
+						<a class="block-04__item" href="#">Link - 1</a>
+						<a class="block-04__item" href="#">Link - 2</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<p class="footer__text">© 2023</p>
+		</div>
+	</footer>
+</body>
+</html>
