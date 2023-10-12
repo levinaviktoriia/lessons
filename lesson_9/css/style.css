@@ -805,7 +805,7 @@ body {
 	margin: 9px 0px 0px 10px;
 }
 .jewellery__column:hover>.jewellery__image{
-	scale: 0.95;
+	transform: scale(0.95);
 }
 
 .jewellery__text a{
