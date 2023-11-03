@@ -194,6 +194,7 @@ body {
 } 
 .profile-item__img{
 	position: relative;
+	height: 100%;
 }
 .profile-item__img img {
 	max-width: 100%;
