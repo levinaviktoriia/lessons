@@ -182,6 +182,9 @@ body {
 .profile-item {
 	display: inline-block;
 	position: relative;
+	width: 386px;
+	height: 532px;
+	overflow: clip;
 }
 .profile-item:hover .profile-item__social{
 	visibility: visible;
@@ -191,9 +194,6 @@ body {
 } 
 .profile-item__img{
 	position: relative;
-	max-width: 386px;
-	max-height: 532px;
-	overflow: clip;
 }
 .profile-item__img img {
 	max-width: 100%;
