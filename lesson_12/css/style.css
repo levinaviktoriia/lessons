@@ -239,15 +239,15 @@ body {
 .profile-item__social {
 	position: absolute;
 	top: 50%;
-	left: 25.9%;
-	margin-top: -25px;
+	left: 50%;
+	margin: -25px 0px 0px -92px;
 	z-index: 2;
 	visibility: hidden;
 }
 
 .profile-item__social>li{
 	display: inline-block;
-	margin: 0 7.5px;
+	margin: 0 6.5px;
 }
 .profile-item__link img{
 	width: 50px;
