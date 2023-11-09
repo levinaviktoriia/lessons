@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Lesson 13</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<ul class="header__menu menu">
+					<li><a class="menu__link" href="#car">Car</a></li>
+					<li><a class="menu__link" href="#block-2d">2D transform</a></li>
+					<li><a class="menu__link" href="#block-3d">3D transform</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<div class="page__picture" id="car">
+					<div class="page__car car">
+						<div class="car__roof">
+							<div class="car__aerial"></div>
+						</div>
+						<div class="car__top">
+							<div class="car__front-window"></div>
+							<div class="car__side-window"></div>
+						</div>
+						<div class="car__bottom">
+							<div class="car__doors">
+								<div class="car__front-door"></div>
+								<div class="car__back-door"></div>
+							</div>
+							<div class="car__headlights">
+								<div class="car__front-headlight"></div>
+								<div class="car__back-headlight"></div>
+								<div class="car__light">
+									<div class="car__back-light"></div>
+									<div class="car__front-light"></div>
+								</div>
+							</div>
+							<div class="car__wheels">
+								<div class="car__wheel car__wheel--front">
+									<div class="car__rims"></div>
+								</div>
+								<div class="car__wheel car__wheel--back">
+									<div class="car__rims"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page__block" id="block-2d">
+					<h2 class="page__subtitle">
+						2D transform
+					</h2>
+					<h3 class="page__property">translate (x, y)</h3>
+					<div class="page__items page__items--translate">
+						<div class="page__item item">
+							<div class="item__example item__example--first">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: translate(100%, 10%);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--second">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: translate(30px, 50px);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--third">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: translate(-50px, -10%);</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="page__property">scale (x, y)</h3>
+					<div class="page__items page__items--scale">
+						<div class="page__item item">
+							<div class="item__example item__example--first">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: scale(0.5);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--second">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: scaleX(0.5);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--third">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: scale(1.5, 0.5);</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="page__property">rotate (n + deg)</h3>
+					<div class="page__items page__items--rotate">
+						<div class="page__item item">
+							<div class="item__example item__example--first">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: rotate(-45deg);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--second">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: rotate(180deg);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--third">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: rotateY(90deg);</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="page__property">skew (x + deg, y + deg)</h3>
+					<div class="page__items page__items--skew">
+						<div class="page__item item">
+							<div class="item__example item__example--first">
+								<div class="item__object item__object--square">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: skewX (-20deg);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--second">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: skew (-20deg, -40deg);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--third">
+								<div class="item__object item__object--square">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: skew (-30deg, 50deg);</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="page__property">Combined</h3>
+					<div class="page__items page__items--combined">
+						<div class="page__item item">
+							<div class="item__example item__example--first">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: translateX(130px) scale(1.2) rotate(20deg) skew(-10deg, -30deg);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--second">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: translate(100%, 0) rotateX(60deg);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--third">
+								<div class="item__object">Hello!</div>
+							</div>
+							<div class="item__description">
+								<p>transform: translate(50%, -50%) scale(1, -1);</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="page__property">transform-origin (center - default)</h3>
+					<div class="page__items page__items--origin">
+						<div class="page__item item">
+							<div class="item__example item__example--first">
+								<div class="item__object">Hello!
+									<div class="item__dot"></div>
+								</div>
+							</div>
+							<div class="item__description">
+								<p>transform-origin: center left;</p>
+								<p>transform: scale(1.5)</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--second">
+								<div class="item__object item__object--square">Hello!
+									<div class="item__dot"></div>
+								</div>
+							</div>
+							<div class="item__description">
+								<p>transform-origin: bottom right;</p>
+								<p>transform: rotate(90deg);</p>
+							</div>
+						</div>
+						<div class="page__item item">
+							<div class="item__example item__example--third">
+								<div class="item__object item__object--square">Hello!
+									<div class="item__dot"></div>
+								</div>
+							</div>
+							<div class="item__description">
+								<p>transform-origin: top center;</p>
+								<p>transform: rotate(-10deg);</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page__block" id="block-3d">
+					<h2 class="page__subtitle">
+						3D transform
+					</h2>
+					<div class="page__items">
+						<div class="page__item item-3d item-3d--translate3d">
+							<h3 class="item-3d__property">translate3D (x, y, z)</h3>
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: <b>150px;</b></p>
+								<p>perspective-origin: center;}</p>
+								<p>.block__item{</p>
+								<p>transform: translate3d(10px, 10px, 40px);}</p>
+							</div>
+						</div>
+						<div class="page__item item-3d item-3d--translate3d">
+							<h3 class="item-3d__property">translate3D (x, y, z)</h3>
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: <b>300px;</b></p>
+								<p>perspective-origin: center;}</p>
+								<p>.block__item{</p>
+								<p>transform: translate3d(10px, 10px, 40px);}</p>
+							</div>
+						</div>
+						<div class="page__item item-3d item-3d--scale3d">
+							<h3 class="item-3d__property">scale3D (x, y, z)</h3>
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: 1000px;</p>
+								<p>perspective-origin: center;}</p>
+								<p>.block__item{</p>
+								<p>transform: scale3d(1, 1, 1.5);}</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="page__property">rotate3D (x, y, z, n + deg)</h3>
+					<div class="page__items">
+						<div class="page__item item-3d item-3d--rotate3d">
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: 50px;</p>
+								<p>perspective-origin: center;}</p>
+								<p>.block__item{</p>
+								<p>transform: rotate3d(10, 0, 0, 20deg);}</p>
+							</div>
+						</div>
+						<div class="page__item item-3d item-3d--rotate3d">
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: 100px;</p>
+								<p>perspective-origin: right;}</p>
+								<p>.block__item{</p>
+								<p>transform: rotate3d(0, 20, 0, 30deg);}</p>
+							</div>
+						</div>
+						<div class="page__item item-3d item-3d--rotate3d">
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: 50px;</p>
+								<p>perspective-origin: center;}</p>
+								<p>.block__item{</p>
+								<p>transform: rotate3d(5, 1, 1, 50deg);}</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="page__property">transform-style (flat - default)</h3>
+					<div class="page__items">
+						<div class="page__item item-3d item-3d--style">
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: 90px;</p>
+								<p>perspective-origin: center;</p>
+								<p><b>transform-style: preserve-3d;</b>}</p>
+								<p>.block__item{</p>
+								<p>transform: rotate3d(0, -10, 0, 50deg);}</p>
+							</div>
+						</div>
+						<div class="page__item item-3d item-3d--style">
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: 90px;</p>
+								<p>perspective-origin: center;</p>
+								<p><b>transform-style: flat;</b>}</p>
+								<p>.block__item{</p>
+								<p>transform: rotate3d(0, -10, 0, 50deg);}</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="page__property">backface-visibility (visible - default)</h3>
+					<div class="page__items">
+						<div class="page__item item-3d item-3d--backface">
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description item-3d__description--big">
+								<p>.block{</p>
+								<p>perspective: 90px;</p>
+								<p>perspective-origin: center;}</p>
+								<p>.block__item{</p>
+								<p><b>backface-visibility: visible;</b></p>
+								<p>transform: rotate3d(0, -10, 0, 150deg);}</p>
+							</div>
+						</div>
+						<div class="page__item item-3d item-3d--backface">
+							<div class="item-3d__example">
+								<div class="item-3d__back">
+									<div class="item-3d__object">Hello!</div>
+								</div>
+							</div>
+							<div class="item-3d__description">
+								<p>.block{</p>
+								<p>perspective: 90px;</p>
+								<p>perspective-origin: center;}</p>
+								<p>.block__item{</p>
+								<p><b>backface-visibility: hidden;</b></p>
+								<p>transform: rotate3d(0, -10, 0, 150deg);}</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__text">© 2023</p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

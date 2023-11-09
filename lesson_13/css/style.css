@@ -1,0 +1,431 @@
+/* ========================= ШРИФТИ =============================== */
+
+/*------------------- Підключення шрифтів ------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Urbanist:regular,500,700&display=swap");
+/* Підключення вручну */
+
+
+/* Скидання стилів */
+@import url('reset.css');
+
+/* Підключення стилів */
+@import url('car.css');
+
+/* Основні стилі */
+body{
+	font-family: 'Urbanist', serif;
+	font-size: 18px;
+	line-height: 1.2;
+}
+
+.wrapper{
+	overflow: clip;
+	min-height: 100%;
+}
+
+[class*="__container"]{
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* HEADER================================================================ */
+
+.header {
+	padding: 25px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	background-color: #dfdfdf;
+	box-shadow:  3px 3px 5px 1px #777777;
+}
+
+.menu li{
+	position: relative;
+	display: inline-block;
+	margin: 0px 40px 0px 0px;
+}
+.menu li::before, 
+.menu li::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	height: 1.5px;
+	width: 12px;
+	background-color: #353535;
+}
+.menu li::before{
+	top: 12px;
+	transform: rotate(30deg);
+}
+.menu li::after{
+	top: 17px;
+	transform: rotate(-30deg);
+}
+.menu li:hover::before{
+	transform: scale(0);
+}
+.menu li:hover::after{
+	transform: scale(0);
+}
+.menu__link {
+	padding: 0 15px 0px 20px;
+	font-size: 24px;
+	line-height: 1.2;
+	font-weight: 500;
+	border-bottom: 2px solid transparent;
+}
+.menu li:hover .menu__link{
+	border-bottom: 2px solid #000;
+}
+
+/* ================================================================ */
+.page{
+	background-color: rgba(255, 239, 143, 0.1);
+}
+
+.page__block {
+	padding: 100px 0 0;
+	text-align: center;
+}
+
+.page__subtitle {
+	font-size: 40px;
+	line-height: 1.4;
+	font-weight: 700;
+	text-align: center;
+	margin: 0px 0px 40px 0px;
+	background-color: rgba(255, 210, 143, 0.4);
+	box-shadow:  3px 3px 15px 3px rgba(255, 212, 143, 0.4);
+	border-radius: 30px;
+}
+.page__property{
+	display: inline-block;
+	font-family: "Cutive Mono", sans-serif;
+	font-size: 30px;
+	text-align: center;
+	background-color: rgba(255, 143, 227, 0.4);
+	box-shadow:  5px 5px 7px 5px rgba(255, 143, 223, 0.4), 5px -5px 7px 2px rgba(255, 143, 223, 0.3);
+	border-radius: 30px;
+	padding: 0 10px;
+	margin: 0px 0px 30px 0px;
+}
+.page__items {
+	font-size: 0;
+	text-align: center;
+	margin: 0px 0px 50px 0px;
+}
+.page__item:not(:last-child){
+ margin: 0px 30px 0px 0px;
+}
+.item, 
+.item-3d{
+	width: 350px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.item__example,
+.item-3d__example{
+	height: 200px;
+	border: 1px solid;
+	background-color: rgba(209, 242, 99, 0.483);
+	margin: 0px 0px 20px 0px;
+}
+
+.item__object{
+	position: relative;
+	top: 50px;
+	left: 125px;
+	width: 100px;
+	height: 100px;
+	background-color: rgba(209, 55, 171, 0.486);
+	border-radius: 50%;
+	border: 1px solid #848484;
+	font-size: 25px;
+	padding: 30px 10px;
+	text-align: center;
+	color: #541d1d;
+}
+.item__object--square{
+	border-radius: 0;
+}
+
+.item__description,
+.item-3d__description{
+	font-family: "Cutive Mono", sans-serif;
+	background-color: #dfdfdf;
+	min-height: 100px;
+	border: 1px solid #000000;
+	font-size: 19px;
+	padding: 10px;
+	text-align: left;
+}
+
+/* 2D transform==================================== */
+
+/* translate (x, y) */
+.page__items--translate .item__object{
+	position: static;
+}
+.page__items--translate .item__example--first:hover>div{
+	transform: translate(100%, 10%);	
+}
+.page__items--translate  .item__example--second:hover>div{
+	transform: translate(30px, 50px);	
+}
+.page__items--translate .item__example--third:hover>div{
+	transform: translate(-50px, -10%);	
+}
+
+/* scale (x, y) */
+.page__items--scale .item__example--first:hover>div{
+	transform: scale(0.5);	
+}
+.page__items--scale .item__example--second:hover>div{
+	transform: scaleX(0.5);		
+}
+.page__items--scale .item__example--third:hover>div{
+	transform: scale(1.5, 0.5);		
+}
+
+
+/* rotate (n + deg) */
+.page__items--rotate .item__object{
+	border-radius: 0;
+}
+.page__items--rotate .item__example--first:hover>div{
+	transform: rotate(-45deg);
+}
+.page__items--rotate .item__example--second:hover>div{
+	transform: rotate(180deg);
+}
+.page__items--rotate .item__example--third:hover>div{
+	transform: rotateY(90deg);
+}
+
+/* skew (x + deg, y + deg) */
+.page__items--skew .item__example--first:hover>div{
+	transform: skewX(-20deg);
+}
+.page__items--skew .item__example--second:hover>div{
+	transform: skew(-20deg, -40deg);
+}
+.page__items--skew .item__example--third:hover>div{
+	transform: skew(-30deg, 50deg);
+}
+
+
+/* Combined */
+.page__items--combined .item__object{
+	border-radius: 0;
+	left: 20px;
+}
+.page__items--combined .item__example--first:hover>div{
+	transform: translateX(130px) scale(1.2) rotate(20deg) skew(-10deg, -30deg);
+}
+.page__items--combined .item__example--second:hover>div{
+	transform: translate(100%, 0) rotateX(60deg);
+}
+.page__items--combined .item__example--third:hover>div{
+	transform: translate(50%, -50%) scale(1, -1);
+}
+
+
+
+/* transform-origin  */
+.page__items--origin .item__object{
+	left: 80px;
+}
+.item__dot{
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #541d1d;
+	position: absolute;
+}
+.item__example--first .item__dot{
+	top: 50%;
+	left: 0;
+}
+.page__items--origin .item__example--first:hover>div{
+	transform-origin: center left;
+	transform: scale(1.5);
+}
+.item__example--second .item__dot{
+	bottom: 0;
+	right: 0;
+}
+.page__items--origin .item__example--second:hover>div{
+	transform-origin: bottom right;
+	transform: rotate(90deg);
+}
+.item__example--third .item__dot{
+	top: 0;
+	left: 50%;
+}
+.page__items--origin .item__example--third:hover>div{
+	transform-origin: top center;
+	transform: rotate(-10deg);
+}
+
+
+
+/* 3D transform==================================== */
+
+.item-3d__property {
+	display: inline-block;
+	font-size: 26px;
+	background-color: rgba(255, 143, 227, 0.4);
+	box-shadow:  5px 5px 7px 5px rgba(255, 143, 223, 0.4), 5px -5px 7px 2px rgba(255, 143, 223, 0.3);
+	border-radius: 30px;
+	padding: 0 10px;
+	margin: 0px 0px 30px 0px;
+}
+.item-3d__back{
+	background-color: rgba(133, 133, 133, 0.7);
+	position: relative;
+	top: 50px;
+	left: 125px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.item-3d__object{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: rgba(209, 55, 171, 0.486);
+	border: 1px solid #848484;
+	font-size: 25px;
+	padding: 30px 10px;
+	text-align: center;
+	color: #541d1d;
+}
+.item-3d__description {
+	min-height: 170px;
+}
+
+
+.item-3d--translate3d .item-3d__back{
+	perspective: 150px;
+	perspective-origin: center;
+}
+.item-3d--translate3d:nth-child(2) .item-3d__back{
+	perspective: 300px;
+}
+.item-3d--translate3d .item-3d__example:hover .item-3d__object {
+	transform: translate3d(10px, 10px, 40px);
+}
+
+.item-3d--scale3d{
+	position: relative;
+}
+.item-3d--scale3d .item-3d__back{
+	perspective: 1000px;
+	perspective-origin: center;
+}
+.item-3d--scale3d .item-3d__example:hover .item-3d__object {
+	transform: scale3d(1, 1, 1.5);
+}
+.item-3d--scale3d::before,
+.item-3d--scale3d::after{
+	content: '';
+	position: absolute;
+	width: 113%;
+	height: 1px;
+	top: 33%;
+	left: -24px;
+	background-color: rgba(84, 28, 28, 0.5);
+
+}
+.item-3d--scale3d::before{
+	transform: rotate(30deg);
+}
+
+.item-3d--scale3d::after{
+	transform: rotate(-30deg);
+}
+
+
+.item-3d--rotate3d .item-3d__back{
+	perspective: 50px;
+	perspective-origin: center;
+	border-radius: 0%;
+}
+.item-3d--rotate3d .item-3d__object{
+	border-radius: 0%;
+}
+.item-3d--rotate3d .item-3d__example:hover .item-3d__object {
+	transform: rotate3d(10, 0, 0, 20deg);
+}
+
+.item-3d--rotate3d:nth-child(2) .item-3d__back{
+	perspective: 100px;
+	perspective-origin: right;
+
+}
+.item-3d--rotate3d:nth-child(2) .item-3d__example:hover .item-3d__object{
+	transform: rotate3d(0, 20, 0, 30deg);
+}
+
+.item-3d--rotate3d:nth-child(3) .item-3d__back{
+	perspective: 50px;
+}
+.item-3d--rotate3d:nth-child(3) .item-3d__example:hover .item-3d__object{
+	transform: rotate3d(5, 1, 1, 50deg);
+}
+
+
+.item-3d--style .item-3d__back{
+	perspective: 90px;
+	perspective-origin: center;
+	transform-style: preserve-3d;
+	border-radius: 0%;
+}
+.item-3d--style .item-3d__object{
+	border-radius: 0%;
+}
+.item-3d--style .item-3d__example:hover .item-3d__object {
+	transform: rotate3d(0, -10, 0, 50deg);
+}
+.item-3d--style:nth-child(2) .item-3d__back{
+	transform-style: flat;
+}
+.item-3d--style .item-3d__description, 
+.item-3d--backface .item-3d__description{
+	min-height: 200px;
+}
+
+
+.item-3d--backface .item-3d__back{
+	perspective: 90px;
+	perspective-origin: center;
+	border-radius: 0%;
+}
+.item-3d--backface .item-3d__object{
+	border-radius: 0%;
+}
+.item-3d--backface .item-3d__example:hover .item-3d__object {
+	transform: rotate3d(0, -10, 0, 150deg);
+}
+.item-3d--backface:nth-child(2) .item-3d__example:hover .item-3d__object{
+	backface-visibility: hidden;
+}
+
+
+/* FOOTER================================================================ */
+.footer {
+	padding: 30px 0;
+	background-color: #dfdfdf;
+	border-top: 1px solid #000;
+}
+.footer__text{
+	text-align: center;
+}
