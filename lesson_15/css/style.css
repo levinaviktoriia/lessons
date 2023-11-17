@@ -45,6 +45,7 @@ body{
 	font-weight: 500;
 	line-height: 1.2;
 	border-radius: 8px;
+	text-align: center;
 }
 .button--primary {
 	color: #FFF;
@@ -314,7 +315,7 @@ body{
 	width: 100%;
 }
 .item-wishlist__content {
-	flex-grow: 1;
+	flex: 1 1 260px;
 }
 .item-wishlist__content>*:not(:last-child){
 	margin: 0px 0px 12px 0px;
@@ -355,7 +356,7 @@ body{
 }
 .item-wishlist__button {
 	padding: 14px 28px;
-	flex: 1 0 auto;
+	flex: 0 0 auto;
 }
 
 /* ORDERS================================================================ */
