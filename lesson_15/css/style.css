@@ -62,9 +62,8 @@ body{
 	transition: all 0.3s;
 }
 .button--secondary:hover{
-	background: rgba(102, 32, 193, 0.1);
+	background: rgba(102, 32, 193, 0.03);
 }
-
 .title{
 	color: #3C4242;
 	font-family: 'Core Sans C', sans-serif;
