@@ -65,6 +65,7 @@ body{
 .button--secondary:hover{
 	background: rgba(102, 32, 193, 0.03);
 }
+
 .title{
 	color: #3C4242;
 	font-family: 'Core Sans C', sans-serif;
@@ -114,6 +115,12 @@ body{
 	font-weight: 500;
 	border-radius: 8px;
 	background: #F6F6F6;
+	border: 1px solid transparent;
+	transition: border 0.3s;
+}
+.header__search:hover{
+	border: 1px solid #BEBCBD;
+
 }
 .header__search::before{
 	content: '';
@@ -128,12 +135,14 @@ body{
 .language__choose{
 	color: #333;
 	font-size: 18px;
+	text-align: center;
 	cursor: pointer;
 	display: inline-flex;
 	min-height: 47px;
 	align-items: center;
 	gap: 19px;
 }
+
 .language__choose::after{
 	content: '';
 	width: 0;
@@ -162,11 +171,15 @@ body{
 	background-color: #fff;
 	border: 1px solid #BEBCBD;
 	border-top: none;
+	transition: background-color .3s;
 }
 .language__link {
 	color: #333;
 	font-size: 18px;
 	padding: 15px 10px;
+}
+.language__list>li:hover{
+	background-color: #F6F6F6;
 }
 
 .header__buttons {
@@ -305,7 +318,7 @@ body{
 	height: 110px;
 	overflow: hidden;
 	border-radius: 5px;
-	outline: 0.5px solid transparent;
+	outline: 1px solid transparent;
 	transition: outline 0.3s;
 }
 .item-wishlist__image:hover{
@@ -461,7 +474,7 @@ body{
 	height: 96px;
 	overflow: hidden;
 	border-radius: 5px;
-	outline: 0.5px solid transparent;
+	outline: 1px solid transparent;
 	transition: outline 0.3s;
 }
 .item-order__image:hover{
