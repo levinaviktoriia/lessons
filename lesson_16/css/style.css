@@ -566,7 +566,7 @@ body {
 	margin-bottom: 30px;
 }
 .cards {
-	padding-left: 37px;
+	padding: 0 23px 0 37px;
 }
 .cards__img {
 	margin-bottom: 30px;
