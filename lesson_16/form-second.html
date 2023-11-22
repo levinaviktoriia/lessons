@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Lesson 16. HTML - form</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title">Lesson №16</h1>
+				<h2 class="header__subtitle">HTML - form</h2>
+				<ul class="header__menu menu">
+					<li><a class="menu__link" href="index.html">Form - 1 (small)</a></li>
+					<li><a class="menu__link" href="#">Form - 2</a></li>
+					<li><a class="menu__link" href="form-third.html">Form - 3</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__block my-info">
+				<div class="my-info__container">
+					<div class="my-info__headers">
+						<h2 class="my-info__title">My Info</h2>
+						<h3 class="my-info__subtitle subtitle">Add Address</h3>
+					</div>
+					<form class="my-info__form form-info" action="#">
+						<div class="form-info__items">
+							<div class="form-info__item item">
+								<label class="item__label" for="first-name">First Name*</label>
+								<input class="item__input" required id="first-name" name="first-name" type="text"
+									placeholder="First Name">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="last-name">Last Name*</label>
+								<input class="item__input" required id="last-name" name="last-name" type="text"
+									placeholder="Last Name">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="country">Country / Region*</label>
+								<input class="item__input" required id="country" name="country" type="text"
+									placeholder="Country / Region">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="company">Company Name</label>
+								<input class="item__input" id="company" name="company" type="text"
+									placeholder="Company (optional)">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="address">Street Address*</label>
+								<input class="item__input" required id="address" name="address" type="text"
+									placeholder="House number and street name">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="address-02">Apt, suite, unit</label>
+								<input class="item__input" id="address-02" name="unit" type="text"
+									placeholder="apartment, suite, unit, etc. (optional)">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="city">City*</label>
+								<input class="item__input" required id="city" name="city" type="text" placeholder="Town / City">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="state">State*</label>
+								<select class="item__select" name="state" id="state">
+									<option class="item__option" value="state-01">State</option>
+									<option class="item__option" value="state-02">State 1</option>
+									<option class="item__option" value="state-03">State 2</option>
+									<option class="item__option" value="state-04">State 3</option>
+								</select>
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="phone">Phone*</label>
+								<input class="item__input" required id="phone" name="phone" type="tel" placeholder="Phone">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="postal-code">Postal Code*</label>
+								<input class="item__input" required id="postal-code" name="postal-code" type="text"
+									placeholder="Postal Code">
+							</div>
+							<div class="form-info__item item">
+								<label class="item__label" for="instruction">Delivery Instruction</label>
+								<textarea class="item__textarea" name="instruction" id="instruction"
+									placeholder="Delivery Instruction"></textarea>
+							</div>
+						</div>
+						<div class="form-info__checkbox">
+							<div class="form-info__checkbox-item checkbox-item">
+								<input class="checkbox-item__input" id="check-01" name="save-shipping-address" type="checkbox">
+								<label class="checkbox-item__label" for="check-01">Set as default shipping address</label>
+							</div>
+							<div class="form-info__checkbox-item checkbox-item">
+								<input class="checkbox-item__input" id="check-02" name="save-billing-address" type="checkbox">
+								<label class="checkbox-item__label" for="check-02">Set as default billing address</label>
+							</div>
+						</div>
+						<div class="form-info__buttons">
+							<button class="form-info__btn button button--enabled" type="submit">Save</button>
+							<button class="form-info__btn button button--disabled" type="reset">Cancel</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__text">© 2023</p>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

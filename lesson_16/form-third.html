@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Lesson 16. HTML - form</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title">Lesson №16</h1>
+				<h2 class="header__subtitle">HTML - form</h2>
+				<ul class="header__menu menu">
+					<li><a class="menu__link" href="index.html">Form - 1 (small)</a></li>
+					<li><a class="menu__link" href="form-second.html">Form - 2</a></li>
+					<li><a class="menu__link" href="#">Form - 3</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__block checkout">
+				<div class="checkout__container">
+					<div class="checkout__headers">
+						<h2 class="checkout__title"><span>Check Out</span></h2>
+						<h3 class="checkout__subtitle subtitle">Billing Details</h3>
+					</div>
+					<div class="checkout__forms form-checkout">
+						<form class="form-checkout__info" action="#">
+							<div class="form-checkout__items">
+								<div class="form-checkout__item item">
+									<label class="item__label" for="first-name">First Name*</label>
+									<input class="item__input" required id="first-name" name="first-name" type="text"
+										placeholder="First Name">
+								</div>
+								<div class="form-checkout__item item">
+									<label class="item__label" for="last-name">Last Name*</label>
+									<input class="item__input" required id="last-name" name="last-name" type="text"
+										placeholder="Last Name">
+								</div>
+								<div class="form-checkout__item item">
+									<label class="item__label" for="country">Country / Region*</label>
+									<input class="item__input" required id="country" name="country" type="text"
+										placeholder="Country / Region">
+								</div>
+								<div class="form-checkout__item item">
+									<label class="item__label" for="company">Company Name</label>
+									<input class="item__input" id="company" name="company" type="text"
+										placeholder="Company (optional)">
+								</div>
+								<div class="form-checkout__item item">
+									<label class="item__label" for="address">Street Address*</label>
+									<input class="item__input" required id="address" name="address" type="text"
+										placeholder="House number and street name">
+								</div>
+								<div class="form-checkout__item item">
+									<label class="item__label" for="address-02">Apt, suite, unit</label>
+									<input class="item__input" id="address-02" name="unit" type="text"
+										placeholder="apartment, suite, unit, etc. (optional)">
+								</div>
+								<div class="form-checkout__item-group item">
+									<label class="item__label" for="city">City*</label>
+									<input class="item__input" required id="city" name="city" type="text"
+										placeholder="Town / City">
+								</div>
+								<div class="form-checkout__item-group item">
+									<label class="item__label" for="state">State*</label>
+									<select class="item__select" name="state" id="state">
+										<option class="item__option" value="state-01">State</option>
+										<option class="item__option" value="state-02">State 1</option>
+										<option class="item__option" value="state-03">State 2</option>
+										<option class="item__option" value="state-04">State 3</option>
+									</select>
+								</div>
+								<div class="form-checkout__item-group item">
+									<label class="item__label" for="postal-code">Postal Code*</label>
+									<input class="item__input" required id="postal-code" name="postal-code" type="text"
+										placeholder="Postal Code">
+								</div>
+								<div class="form-checkout__item item">
+									<label class="item__label" for="phone">Phone*</label>
+									<input class="item__input" required id="phone" name="phone" type="tel" placeholder="Phone">
+								</div>
+							</div>
+							<div class="form-checkout__button">
+								<button class="form-checkout__btn button button--enabled" type="button">Continue to
+									delivery</button>
+							</div>
+							<div class="form-checkout__checkbox">
+								<div class="form-checkout__checkbox-item checkbox-item">
+									<input class="checkbox-item__input" id="check-03" name="save-info" type="checkbox">
+									<label class="checkbox-item__label" for="check-03">Save my information for a faster
+										checkout</label>
+								</div>
+							</div>
+						</form>
+						<form class="form-checkout__address" action="#">
+							<div class="form-checkout__header">
+								<h3 class="form-checkout__subtitle subtitle">Shipping Address</h3>
+								<div class="form-checkout__text">
+									<p>Select the address that matches your card or payment method.</p>
+								</div>
+							</div>
+							<div class="form-checkout__radio form-radio">
+								<div class="form-radio__item">
+									<input checked class="form-radio__input" id="same-addres" type="radio" name="address">
+									<label class="form-radio__label" for="same-addres">Same as Billing address</label>
+								</div>
+								<div class="form-radio__item">
+									<input class="form-radio__input" id="dif-addres" type="radio" name="address">
+									<label class="form-radio__label" for="dif-addres">Use a different shipping address</label>
+								</div>
+							</div>
+						</form>
+						<div class="form-checkout__shipping">
+							<div class="form-checkout__header">
+								<h3 class="form-checkout__subtitle subtitle">Shipping Method</h3>
+							</div>
+							<div class="form-checkout__delivery delivery">
+								<div class="delivery__row">
+									<h5 class="delivery__title">
+										Arrives by Monday, June 7
+									</h5>
+								</div>
+								<div class="delivery__row delivery__row--flex">
+									<div class="delivery__column">
+										<h5 class="delivery__title">Delivery Charges</h5>
+										<div class="delivery__text">
+											<p>Additional fess may apply</p>
+										</div>
+									</div>
+									<div class="delivery__column">
+										<p class="delivery__price">$5.00</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form class="form-checkout__payment" action="#">
+							<div class="form-checkout__header">
+								<h3 class="form-checkout__subtitle subtitle">Payment Method</h3>
+								<div class="form-checkout__text">
+									<p>All transactions are secure and encrypted.</p>
+								</div>
+							</div>
+							<div class="form-checkout__radio form-radio">
+								<div class="form-radio__item">
+									<input checked class="form-radio__input" id="credit-card" type="radio" name="paypent" value="credit-card">
+									<label for="credit-card" class="form-radio__title">Credit Card	
+									</label>
+									<div class="form-radio__text">
+										<p>We accept all major credit cards.</p>
+									</div>
+									<div class="form-radio__content cards">
+										<div class="cards__img">
+											<img src="img/google_pay.png" alt="Google pay">
+											<img src="img/visa.png" alt="Visa">
+											<img src="img/pay_pal.png" alt="Pay pal">
+											<img src="img/pay__pass.png" alt="Pay pass">
+										</div>
+										<div class="cards__information">
+											<div class="cards__item">
+												<input class="cards__input" type="text" minlength="16" maxlength="16" name="card-number" placeholder="Card number">
+											</div>
+											<div class="cards__item">
+												<input class="cards__input" type="text" name="card-name" placeholder="Name of card">
+											</div>
+											<div class="cards__item">
+												<input class="cards__input" type="text" name="card-date" placeholder="Expiration date (MM/YY)">
+											</div>
+											<div class="cards__item cards__item--password">
+												<input class="cards__input" minlength="3" maxlength="3" type="password" name="card-code" placeholder="Security Code">
+												<button class="cards__password-btn" type="button"></button>
+											</div>						
+										</div>
+									</div>
+								</div>
+								<div class="form-radio__item">
+									<input class="form-radio__input" id="cash-on-delivery" type="radio" name="paypent"
+										value="cash-on-delivery">
+									<label for="cash-on-delivery" class="form-radio__title">Cash on delivery</label>
+									<div class="form-radio__text">
+										<p>Pay with cash upon delivery.</p>
+									</div>
+								</div>
+								<div class="form-radio__item">
+									<input class="form-radio__input" type="radio" id="paypol" name="paypent" value="paypol">
+									<label for="paypol" class="form-radio__title">Paypol</label>
+								</div>
+							</div>
+							<div class="form-checkout__button">
+								<button class="form-checkout__btn button button--enabled" type="button">Pay Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__text">© 2023</p>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

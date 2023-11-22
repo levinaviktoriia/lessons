@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Lesson 16. HTML - form</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<h1 class="header__title">Lesson №16</h1>
+				<h2 class="header__subtitle">HTML - form</h2>
+				<ul class="header__menu menu">
+					<li><a class="menu__link" href="#">Form - 1 (small)</a></li>
+					<li><a class="menu__link" href="form-second.html">Form - 2</a></li>
+					<li><a class="menu__link" href="form-third.html">Form - 3</a></li>
+				</ul>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__block consulting">
+				<div class="consulting__container">
+					<div class="consulting__top">
+						<h4 class="consulting__subtitle">Contact Us</h4>
+						<h2 class="consulting__title">Request A Call Back !</h2>
+					</div>
+					<form class="consulting__form form-consulting" action="#">
+						<div class="form-consulting__inputs">
+							<div class="form-consulting__item">
+								<input class="form-consulting__input" name="name" type="text" placeholder="Your Name">
+							</div>
+							<div class="form-consulting__item">
+								<input class="form-consulting__input" name="phone" type="tel" placeholder="Phone Number">
+							</div>
+							<div class="form-consulting__item">
+								<input class="form-consulting__input" name="email" type="email" placeholder="Email Address">
+							</div>
+							<div class="form-consulting__item">
+								<input class="form-consulting__input" name="subject" type="text" placeholder="Subject">
+							</div>
+							<div class="form-consulting__item form-consulting__item--textarea">
+								<textarea class="form-consulting__textarea" name="message" placeholder="Message..."></textarea>
+							</div>
+						</div>
+						<button class="form-consulting__btn" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__text">© 2023</p>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
