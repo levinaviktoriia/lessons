@@ -162,16 +162,16 @@
 										</div>
 										<div class="cards__information">
 											<div class="cards__item">
-												<input class="cards__input" type="text" minlength="16" maxlength="16" name="card-number" placeholder="Card number">
+												<input class="cards__input" required type="text" minlength="16" maxlength="16" name="card-number" placeholder="Card number">
 											</div>
 											<div class="cards__item">
-												<input class="cards__input" type="text" name="card-name" placeholder="Name of card">
+												<input class="cards__input" required type="text" name="card-name" placeholder="Name of card">
 											</div>
 											<div class="cards__item">
-												<input class="cards__input" type="text" name="card-date" placeholder="Expiration date (MM/YY)">
+												<input class="cards__input" required type="text" name="card-date" placeholder="Expiration date (MM/YY)">
 											</div>
 											<div class="cards__item cards__item--password">
-												<input class="cards__input" minlength="3" maxlength="3" type="password" name="card-code" placeholder="Security Code">
+												<input class="cards__input" required minlength="3" maxlength="3" type="password" name="card-code" placeholder="Security Code">
 												<button class="cards__password-btn" type="button"></button>
 											</div>						
 										</div>
@@ -191,7 +191,7 @@
 								</div>
 							</div>
 							<div class="form-checkout__button">
-								<button class="form-checkout__btn button button--enabled" type="button">Pay Now</button>
+								<button class="form-checkout__btn button button--enabled" type="submit">Pay Now</button>
 							</div>
 						</form>
 					</div>
