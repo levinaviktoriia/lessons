@@ -251,11 +251,6 @@
 		transform: scale(1.1);
 	}
 }
-@media (not(hover)) {
-	.item-articles__link-title:active {
-		text-decoration: underline;
-	}
-}
 
 @media (max-width: 1000px) {
 	.articles {
