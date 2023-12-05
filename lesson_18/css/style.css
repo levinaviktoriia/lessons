@@ -199,7 +199,7 @@ body {
 		height: 100%;
 		overflow: auto;
 		top: 0;
-		background-color: rgb(244, 202, 177);
+		background-color: rgb(254, 246, 232);
 	}
 	.menu__body::before {
 		content: "";
@@ -217,7 +217,7 @@ body {
 		height: 70px;
 		top: 0;
 		z-index: 20;
-		background-color: rgb(244, 202, 177);
+		background-color: rgb(251, 237, 215);
 	}
 	.menu__body,
 	.menu__body::before,
