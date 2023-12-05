@@ -682,15 +682,15 @@ body {
 	}
 }
 /* ----------------------------- */
-.jewellery__decor-background{
+.jewellery__decor-background {
 	display: none;
 }
-@media (min-width: 1450px){
-	.jewellery__decor-background{
+@media (min-width: 1450px) {
+	.jewellery__decor-background {
 		display: block;
 	}
 	.jewellery__left-decor,
-	.jewellery__right-decor{
+	.jewellery__right-decor {
 		position: absolute;
 	}
 	.jewellery__left-decor {
@@ -702,15 +702,15 @@ body {
 		bottom: 115px;
 	}
 }
-.jewellery__image-background{
+.jewellery__image-background {
 	display: none;
 }
-@media (min-width: 1550px){
-	.jewellery__image-background{
+@media (min-width: 1550px) {
+	.jewellery__image-background {
 		display: block;
 	}
 	.jewellery__bottom-bg,
-	.jewellery__right-bg{
+	.jewellery__right-bg {
 		position: absolute;
 	}
 	.jewellery__bottom-bg {
