@@ -366,12 +366,9 @@ body {
 	background-color: #fff9f4;
 	color: #727272;
 	font-size: 22px;
-	display: flex;
-	align-items: center;
 	padding: 150px 0 50px;
 }
 .hero__container {
-	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
