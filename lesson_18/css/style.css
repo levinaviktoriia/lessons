@@ -3,34 +3,34 @@
 /* Підключення шрифтів */
 @import url("fonts.css");
 /* ========================= Скидання стилів =========================*/
-@import url('reset.css');
+@import url("reset.css");
 
 /* Основні стилі */
-body{
-	font-family: 'Inter', sans-serif;
+body {
+	font-family: "Inter", sans-serif;
 }
-.wrapper{
+.wrapper {
 	overflow: clip;
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 }
-.wrapper > main{
+.wrapper > main {
 	flex-grow: 1;
 }
-[class*="__container"]{
+[class*="__container"] {
 	max-width: 1210px;
 	margin: 0 auto;
 	padding: 0 15px;
 }
-.page{
+.page {
 	display: flex;
 	flex-direction: column;
 }
 /* HEADER================================================================ */
-.header{
-	background: #FFF9F4;
-	font-family: 'Merriweather', sans-serif;
+.header {
+	background: #fff9f4;
+	font-family: "Merriweather", sans-serif;
 	font-size: 20px;
 	border-bottom: 1px solid rgba(131, 131, 131, 0.21);
 	position: fixed;
@@ -65,49 +65,49 @@ body{
 	column-gap: 36px;
 	row-gap: 3px;
 }
-.menu__item--active .menu__link{
+.menu__item--active .menu__link {
 	font-weight: 700;
 	text-decoration: underline;
 }
 .menu__link {
-	font-family: 'Merriweather', sans-serif;
+	font-family: "Merriweather", sans-serif;
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.2;
 	text-decoration: underline 1.5px rgba(0, 0, 0, 0);
 	transition: all 0.2s;
 }
-@media (any-hover: hover){
-	.menu__item:hover .menu__link{
-		text-decoration-color:#000;
+@media (any-hover: hover) {
+	.menu__item:hover .menu__link {
+		text-decoration-color: #000;
 		text-shadow: 0px 0px 0.7px #000;
 	}
 }
-.menu__item--submenu{
-	position: relative;	
+.menu__item--submenu {
+	position: relative;
 }
-@media (min-width: 991.98px){
-	.menu__item--submenu .menu__link{
+@media (min-width: 991.98px) {
+	.menu__item--submenu .menu__link {
 		position: relative;
 		padding-right: 20px;
 	}
-	.menu__item--submenu .menu__link::after{
-		content: '';
+	.menu__item--submenu .menu__link::after {
+		content: "";
 		height: 8px;
 		width: 16px;
 		position: absolute;
 		top: 9px;
 		right: 0;
-		background: url('../img/arrow.png') no-repeat;
-		transition: transform .2s;
+		background: url("../img/arrow.png") no-repeat;
+		transition: transform 0.2s;
 	}
 }
-@media (any-hover: hover){
-	.menu__item--submenu:hover .menu__link::after{
+@media (any-hover: hover) {
+	.menu__item--submenu:hover .menu__link::after {
 		transform: rotate(-180deg);
 	}
 }
-@media (min-width: 991.98px){
+@media (min-width: 991.98px) {
 	.submenu {
 		position: absolute;
 		top: 100%;
@@ -120,8 +120,8 @@ body{
 		pointer-events: none;
 	}
 }
-@media (any-hover: hover){
-	.menu__item--submenu:hover .submenu{
+@media (any-hover: hover) {
+	.menu__item--submenu:hover .submenu {
 		visibility: visible;
 		opacity: 1;
 		transform: translateY(0px);
@@ -131,31 +131,31 @@ body{
 
 .submenu__list {
 	padding: 20px;
-	background-color: #0E333D;
+	background-color: #0e333d;
 	box-shadow: 3px 3px 5px #000;
 	border-radius: 8px;
 }
-.submenu__item:not(:last-child){
+.submenu__item:not(:last-child) {
 	margin-bottom: 10px;
 }
 .submenu__link {
-	color: #FFF;
+	color: #fff;
 	font-size: 18px;
 	padding: 5px 0;
 	position: relative;
 }
-.submenu__link::after{
-	content: '';
+.submenu__link::after {
+	content: "";
 	position: absolute;
 	height: 1px;
 	width: 0;
 	left: 50%;
 	bottom: 0;
 	background-color: #fff;
-	transition: all .2s;
+	transition: all 0.2s;
 }
-@media (any-hover: hover){
-	.submenu__item:hover .submenu__link::after{
+@media (any-hover: hover) {
+	.submenu__item:hover .submenu__link::after {
 		left: 0;
 		width: 100%;
 	}
@@ -168,32 +168,32 @@ body{
 	position: relative;
 	z-index: 5;
 }
-.button{
-	color: #FFF;
-	background: #0E333D;
+.button {
+	color: #fff;
+	background: #0e333d;
 	border-radius: 5px;
-	transition: all .3s;
+	transition: all 0.3s;
 }
-.header__icon-menu{
+.header__icon-menu {
 	display: none;
 }
-@media (any-hover: hover){
-	.button:hover{
+@media (any-hover: hover) {
+	.button:hover {
 		background: #051a20;
 	}
 }
 
-@media (max-width: 1024px){
-	.menu__list{
+@media (max-width: 1024px) {
+	.menu__list {
 		column-gap: 28px;
 	}
 }
-@media (max-width: 991.98px){
-	.header__container{
+@media (max-width: 991.98px) {
+	.header__container {
 		min-height: 70px;
 		gap: 20px;
 	}
-	.menu__body{
+	.menu__body {
 		position: fixed;
 		width: 100%;
 		height: 100%;
@@ -201,8 +201,8 @@ body{
 		top: 0;
 		background-color: rgb(244, 202, 177);
 	}
-	.menu__body::before{
-		content: '';
+	.menu__body::before {
+		content: "";
 		position: fixed;
 		width: 100%;
 		height: 1px;
@@ -210,8 +210,8 @@ body{
 		z-index: 3;
 		background-color: rgba(69, 69, 69, 0.635);
 	}
-	.menu__body::after{
-		content: '';
+	.menu__body::after {
+		content: "";
 		position: fixed;
 		width: 100%;
 		height: 70px;
@@ -221,23 +221,23 @@ body{
 	}
 	.menu__body,
 	.menu__body::before,
-	.menu__body::after{
+	.menu__body::after {
 		left: 100%;
-		transition: left .2s;
+		transition: left 0.2s;
 	}
 
-	.menu__list{
+	.menu__list {
 		padding: 80px 20px 20px;
 		flex-direction: column;
 	}
-	.menu__item{
+	.menu__item {
 		text-align: right;
 	}
-	.menu__link{
+	.menu__link {
 		font-size: 26px;
 		padding: 10px 0;
 	}
-	.submenu__link{
+	.submenu__link {
 		font-size: 22px;
 		padding: 8px 0;
 	}
@@ -248,87 +248,87 @@ body{
 	}
 
 	/* ================ Кнопка МЕНЮ ===================*/
-	.header__icon-menu{
+	.header__icon-menu {
 		display: block;
 		position: relative;
 		width: 50px;
 		height: 38px;
 		padding: 10px;
-		background-color: #0E333D;
+		background-color: #0e333d;
 		border-radius: 5px;
 	}
 	.header__icon-menu::before,
-	.header__icon-menu::after{
-		content: '';
+	.header__icon-menu::after {
+		content: "";
 		position: absolute;
 		left: 10px;
 		width: 30px;
 		height: 2px;
-		background-color: #FFF;
+		background-color: #fff;
 		transition: all 0.2s;
 	}
-	.header__icon-menu::before{
+	.header__icon-menu::before {
 		top: 10px;
 	}
-	.header__icon-menu::after{
+	.header__icon-menu::after {
 		bottom: 10px;
 	}
-	.header__icon-menu span{
+	.header__icon-menu span {
 		position: absolute;
 		left: 10px;
 		top: 50%;
 		margin-top: -1px;
 		width: 30px;
 		height: 2px;
-		background-color: #FFF;
+		background-color: #fff;
 		transition: all 0.2s;
 	}
 	.menu-open .header__icon-menu::before,
-	.menu-open .header__icon-menu::after{
+	.menu-open .header__icon-menu::after {
 		top: 50%;
 		margin-top: -1px;
 	}
-	.menu-open .header__icon-menu span{
+	.menu-open .header__icon-menu span {
 		transform: scale(0);
 	}
-	.menu-open .header__icon-menu::before{
+	.menu-open .header__icon-menu::before {
 		transform: rotate(45deg);
 	}
-	.menu-open .header__icon-menu::after{
+	.menu-open .header__icon-menu::after {
 		transform: rotate(-45deg);
 	}
 	/* ================ Кнопка МЕНЮ ===================*/
 
 	.menu-open .menu__body,
 	.menu-open .menu__body::before,
-	.menu-open .menu__body::after{
+	.menu-open .menu__body::after {
 		left: 0;
 	}
 }
-@media (max-width: 767.98px){
+@media (max-width: 767.98px) {
 	.header__logo {
 		font-size: 26px;
 	}
-	.header__container{
+	.header__container {
 		min-height: 60px;
 	}
-	.menu__body::before{
+	.menu__body::before {
 		top: 60px;
 	}
-	.menu__body::after{
+	.menu__body::after {
 		height: 60px;
 	}
-	.menu__list{
+	.menu__list {
 		padding-top: 70px;
 	}
 	.submenu__list {
 		padding: 10px;
-  }
-	.submenu__item{
+	}
+	.submenu__item {
 		margin-bottom: 0px;
-  }
+	}
 }
-@media (max-width: 480px){
+@media (max-width: 480px) {
 	.header__container {
 		gap: 10px;
 		min-height: 50px;
@@ -336,37 +336,37 @@ body{
 	.header__logo {
 		font-size: 24px;
 	}
-	.header__link{
+	.header__link {
 		position: relative;
 		width: 45px;
 		height: 38px;
 	}
-	.header__link span{
+	.header__link span {
 		display: none;
 	}
-	.header__link::before{
-		content: '';
+	.header__link::before {
+		content: "";
 		position: absolute;
 		height: 22px;
 		width: 20px;
 		top: 8px;
 		left: 12.5px;
-		background: url('../img/user-solid.svg') center / contain no-repeat;
+		background: url("../img/user-solid.svg") center / contain no-repeat;
 	}
-	.menu__body::before{
+	.menu__body::before {
 		top: 50px;
 	}
-	.menu__body::after{
+	.menu__body::after {
 		height: 50px;
 	}
-	.menu__list{
+	.menu__list {
 		padding: 50px 15px 10px;
 	}
 }
 
 /* HERO================================================================ */
 .hero {
-	background-color: #FFF9F4;
+	background-color: #fff9f4;
 	color: #727272;
 	font-size: 22px;
 	flex-grow: 1;
@@ -387,22 +387,22 @@ body{
 	flex: 1 1 48.9%;
 }
 .hero__title {
-	color: #0E333D;
-	font-family: 'DM Serif Text', sans-serif;
+	color: #0e333d;
+	font-family: "DM Serif Text", sans-serif;
 	font-size: 78px;
 	font-weight: 400;
 	line-height: 1.27;
 }
-.hero__title:not(:last-child){
+.hero__title:not(:last-child) {
 	margin-bottom: 32px;
 }
 .hero__text {
 	line-height: 1.48;
 }
-.hero__text p:not(:last-child){
+.hero__text p:not(:last-child) {
 	margin-bottom: 7px;
 }
-.hero__text:not(:last-child){
+.hero__text:not(:last-child) {
 	margin-bottom: 48px;
 }
 .hero__links {
@@ -412,26 +412,26 @@ body{
 	column-gap: 47px;
 	row-gap: 15px;
 }
-.hero__links:not(:last-child){
+.hero__links:not(:last-child) {
 	margin-bottom: 30px;
 }
 .hero__link {
-	font-family: 'DM Serif Text', sans-serif;
+	font-family: "DM Serif Text", sans-serif;
 	font-size: 28px;
 	flex-shrink: 0;
 }
-.hero__link--padding{
+.hero__link--padding {
 	padding: 17px 38px;
 }
-.hero__link--color{
-	color: #0E333D;
+.hero__link--color {
+	color: #0e333d;
 	text-decoration: underline 2px rgba(14, 52, 62, 1);
 	transition: all 0.3s;
 }
-@media (any-hover: hover){
-	.hero__link--color:hover{
-		text-decoration-color:rgba(14, 52, 62, 0);
-		text-shadow: 0px 0px 1px #0E333D;
+@media (any-hover: hover) {
+	.hero__link--color:hover {
+		text-decoration-color: rgba(14, 52, 62, 0);
+		text-shadow: 0px 0px 1px #0e333d;
 	}
 }
 .hero__images {
@@ -443,103 +443,348 @@ body{
 	row-gap: 5px;
 	align-items: flex-start;
 }
-.hero__img{
+.hero__img {
 	flex: 1 1 245px;
 }
-.hero__img img{
+.hero__img img {
 	aspect-ratio: 245 / 467;
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 }
-.hero__img:first-child{
+.hero__img:first-child {
 	align-self: flex-end;
 }
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
 	.hero__images {
 		min-height: 0;
 		column-gap: 15px;
 	}
-	.hero__title{
+	.hero__title {
 		font-size: 58px;
 	}
 }
-@media (max-width: 991.98px){
-	.hero{
+@media (max-width: 991.98px) {
+	.hero {
 		padding: 100px 0 50px;
 	}
-	.hero__container{
+	.hero__container {
 		display: block;
 	}
-	.hero__content:not(:last-child){
+	.hero__content:not(:last-child) {
 		margin-bottom: 30px;
 	}
-	.hero__title{
+	.hero__title {
 		font-size: 50px;
 	}
-	.hero__title:not(:last-child){
+	.hero__title:not(:last-child) {
 		margin-bottom: 10px;
 	}
-	.hero__text:not(:last-child){
+	.hero__text:not(:last-child) {
 		margin-bottom: 30px;
 	}
-	.hero__images{
+	.hero__images {
 		align-items: center;
 		min-height: 0px;
 	}
-	.hero__img:first-child{
+	.hero__img:first-child {
 		align-self: center;
 	}
 }
-@media (max-width: 767.98px){
-	.hero{
+@media (max-width: 767.98px) {
+	.hero {
 		padding: 80px 0 50px;
 		font-size: 18px;
 	}
-	.hero__title{
+	.hero__title {
 		font-size: 30px;
 	}
 	.hero__link {
 		font-size: 22px;
 	}
 }
-@media (max-width: 480px){
-	.hero__images{
+@media (max-width: 480px) {
+	.hero__images {
 		flex-wrap: wrap;
 	}
-	.hero__title{
+	.hero__title {
 		font-size: 24px;
 	}
-	.hero__text{
+	.hero__text {
 		text-align: justify;
 	}
 	.hero__img {
 		flex: 0 1 100%;
 	}
-	.hero__img + .hero__img{
+	.hero__img + .hero__img {
 		display: none;
 	}
-	.hero__links{
+	.hero__links {
 		justify-content: space-around;
 	}
-	.hero__link--padding{
+	.hero__link--padding {
 		padding: 10px 20px;
 	}
 }
-/* ================================================================ */
+/* JEWELLERY================================================================ */
+
+.jewellery {
+	position: relative;
+	padding: 98px 0 58px;
+	color: #fff;
+	font-family: "Cormorant Infant", sans-serif;
+	background: #502203;
+	font-size: 22px;
+	overflow: clip;
+	z-index: 10;
+}
+.jewellery__container {
+	max-width: 1220px;
+	display: flex;
+	column-gap: 1.95%;
+}
+.jewellery__headers {
+	flex-basis: 29.75%;
+	padding-top: 57px;
+}
+.jewellery__title {
+	font-size: 78px;
+	font-weight: 700;
+	line-height: 1.29;
+}
+.jewellery__title:not(:last-child) {
+	margin-bottom: 8px;
+}
+.jewellery__link {
+	font-size: 24px;
+	font-weight: 600;
+	padding: 15px 25px;
+	border-radius: 4px;
+	border: 1px solid #fff;
+	position: relative;
+}
+.jewellery__link::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 15px;
+	right: 8px;
+	background-color: rgba(255, 255, 255, 0.06);
+	border-radius: 4px;
+	transition: all 0.2s;
+}
+.jewellery__link:hover::after {
+	top: 0;
+	right: 0;
+}
+.jewellery__link:not(:last-child) {
+	margin-bottom: 15px;
+}
+.jewellery__img {
+	flex: 0 0 36.1%;
+	/* flex-basis: 36.1%; */
+	border: 1px solid #fff;
+	border-radius: 215px;
+	padding: 28px 20px;
+}
+.jewellery__img img {
+	aspect-ratio: 390 / 554;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 195px;
+}
+.jewellery__content {
+	flex-basis: 32.2%;
+	padding-top: 76px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+}
+.jewellery__text {
+	font-weight: 700;
+	line-height: 1.48;
+	max-width: 312px;
+}
+.jewellery__text p:not(:last-child) {
+	margin-bottom: 10px;
+}
+.jewellery__subtitle {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.2;
+	padding-left: 11px;
+	position: relative;
+	align-self: flex-end;
+	margin-bottom: 183px;
+}
+.jewellery__subtitle::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(0px, -50%);
+	height: 79%;
+	width: 1px;
+	background-color: #fff;
+}
+@media (max-width: 1024px) {
+	.jewellery__subtitle {
+		margin-bottom: 100px;
+	}
+}
+@media (max-width: 991.98px) {
+	.jewellery {
+		padding: 70px 0 58px;
+	}
+	.jewellery__container {
+		flex-wrap: wrap;
+		column-gap: 5%;
+		row-gap: 30px;
+		justify-content: space-around;
+	}
+	.jewellery__headers {
+		flex-basis: 100%;
+		text-align: center;
+		padding-top: 0;
+	}
+	.jewellery__title {
+		font-size: 60px;
+	}
+	.jewellery__img {
+		flex-basis: 45%;
+	}
+	.jewellery__content {
+		flex-basis: 50%;
+	}
+}
+@media (max-width: 767.98px) {
+	.jewellery {
+		padding: 50px 0;
+		font-size: 18px;
+	}
+	.jewellery__title {
+		font-size: 40px;
+	}
+	.jewellery__content {
+		flex-basis: 100%;
+		padding-top: 0;
+	}
+	.jewellery__img {
+		flex-basis: 430px;
+	}
+	.jewellery__text {
+		max-width: none;
+	}
+	.jewellery__subtitle {
+		margin-bottom: 0;
+		font-size: 24px;
+		align-self: flex-start;
+	}
+}
+@media (max-width: 480px) {
+	.jewellery__title {
+		font-size: 30px;
+	}
+	.jewellery__img {
+		flex-shrink: 1;
+		padding: 20px;
+	}
+	.jewellery__content {
+		gap: 10px;
+	}
+	.jewellery__subtitle {
+		font-size: 20px;
+	}
+}
+/* ----------------------------- */
+.jewellery__decor-background{
+	display: none;
+}
+@media (min-width: 1450px){
+	.jewellery__decor-background{
+		display: block;
+	}
+	.jewellery__left-decor,
+	.jewellery__right-decor{
+		position: absolute;
+	}
+	.jewellery__left-decor {
+		left: -10px;
+		top: -90px;
+	}
+	.jewellery__right-decor {
+		right: 0;
+		bottom: 115px;
+	}
+}
+.jewellery__image-background{
+	display: none;
+}
+@media (min-width: 1550px){
+	.jewellery__image-background{
+		display: block;
+	}
+	.jewellery__bottom-bg,
+	.jewellery__right-bg{
+		position: absolute;
+	}
+	.jewellery__bottom-bg {
+		width: 239px;
+		height: 215px;
+		bottom: 0;
+		left: 44px;
+	}
+	.jewellery__bottom-bg img {
+		border-radius: 195px 195px 0px 0px;
+		aspect-ratio: 563 / 858;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		position: relative;
+	}
+	.jewellery__bottom-bg::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		right: 7px;
+		bottom: 5px;
+		border: 1px solid #fff;
+		border-radius: 195px 195px 0px 0px;
+	}
+	.jewellery__right-bg {
+		padding: 17px 12px;
+		border-radius: 215px;
+		border: 1px solid #fff;
+		width: 261px;
+		height: 371px;
+		bottom: 55px;
+		right: -100px;
+	}
+	.jewellery__right-bg img {
+		border-radius: 195px;
+		aspect-ratio: 237 / 337;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
 
 /* ================================================================ */
-.footer{
-	background: #0E333D;
-	color: #FFF;
-	font-family: 'Merriweather', sans-serif;
+.footer {
+	background: #0e333d;
+	color: #fff;
+	font-family: "Merriweather", sans-serif;
 	font-size: 26px;
 	text-align: center;
 	padding: 50px 0;
 	border-top: 1px solid rgba(131, 131, 131, 0.21);
 }
-@media (max-width: 767.98px){
-	.footer{
+@media (max-width: 767.98px) {
+	.footer {
 		padding: 30px 0;
 		font-size: 20px;
 	}
