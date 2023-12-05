@@ -23,10 +23,7 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 }
-.page {
-	display: flex;
-	flex-direction: column;
-}
+
 /* HEADER================================================================ */
 .header {
 	background: #fff9f4;
@@ -366,10 +363,10 @@ body {
 
 /* HERO================================================================ */
 .hero {
+	height: 100vh;
 	background-color: #fff9f4;
 	color: #727272;
 	font-size: 22px;
-	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	padding: 150px 0 50px;
@@ -377,14 +374,13 @@ body {
 .hero__container {
 	flex-grow: 1;
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	column-gap: 30px;
 	row-gap: 35px;
 }
 .hero__content {
-	flex: 1 1 48.9%;
+	flex: 1 1 577px;
 }
 .hero__title {
 	color: #0e333d;
@@ -436,7 +432,7 @@ body {
 }
 .hero__images {
 	min-height: 536px;
-	flex: 0 1 44.3%;
+	flex: 0 1 523px;
 	display: flex;
 	justify-content: space-between;
 	column-gap: 32px;
@@ -444,7 +440,7 @@ body {
 	align-items: flex-start;
 }
 .hero__img {
-	flex: 1 1 245px;
+	flex: 1 0 46.3%;
 }
 .hero__img img {
 	aspect-ratio: 245 / 467;
@@ -457,7 +453,6 @@ body {
 }
 @media (max-width: 1100px) {
 	.hero__images {
-		min-height: 0;
 		column-gap: 15px;
 	}
 	.hero__title {
@@ -469,10 +464,11 @@ body {
 		padding: 100px 0 50px;
 	}
 	.hero__container {
-		display: block;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
-	.hero__content:not(:last-child) {
-		margin-bottom: 30px;
+	.hero__content {
+		flex-basis: 100%;
 	}
 	.hero__title {
 		font-size: 50px;
@@ -482,13 +478,6 @@ body {
 	}
 	.hero__text:not(:last-child) {
 		margin-bottom: 30px;
-	}
-	.hero__images {
-		align-items: center;
-		min-height: 0px;
-	}
-	.hero__img:first-child {
-		align-self: center;
 	}
 }
 @media (max-width: 767.98px) {
@@ -502,22 +491,19 @@ body {
 	.hero__link {
 		font-size: 22px;
 	}
+
+}
+@media (max-width: 560px) {
+	.hero__images {
+		min-height: 0;
+	}
 }
 @media (max-width: 480px) {
-	.hero__images {
-		flex-wrap: wrap;
-	}
 	.hero__title {
 		font-size: 24px;
 	}
 	.hero__text {
 		text-align: justify;
-	}
-	.hero__img {
-		flex: 0 1 100%;
-	}
-	.hero__img + .hero__img {
-		display: none;
 	}
 	.hero__links {
 		justify-content: space-around;
