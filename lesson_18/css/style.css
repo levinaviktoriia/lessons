@@ -117,14 +117,13 @@ body {
 		pointer-events: none;
 	}
 }
-@media (any-hover: hover) {
-	.menu__item--submenu:hover .submenu {
-		visibility: visible;
-		opacity: 1;
-		transform: translateY(0px);
-		pointer-events: all;
-	}
+.menu__item--submenu:hover .submenu {
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0px);
+	pointer-events: all;
 }
+
 
 .submenu__list {
 	padding: 20px;
