@@ -10,7 +10,7 @@ body {
 	font-family: "Inter", sans-serif;
 }
 .menu-open body{
-	overflow: clip;
+	overflow: hidden;
 }
 .wrapper {
 	overflow: clip;
