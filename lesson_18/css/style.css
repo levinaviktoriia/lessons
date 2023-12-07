@@ -600,7 +600,7 @@ body {
 	padding-left: 11px;
 	position: relative;
 	align-self: flex-end;
-	margin-bottom: 183px;
+	margin: auto 0;
 }
 .jewellery__subtitle::before {
 	content: "";
@@ -611,11 +611,6 @@ body {
 	height: 79%;
 	width: 1px;
 	background-color: #fff;
-}
-@media (max-width: 1024px) {
-	.jewellery__subtitle {
-		margin-bottom: 100px;
-	}
 }
 @media (max-width: 991.98px) {
 	.jewellery {
@@ -661,7 +656,7 @@ body {
 		max-width: none;
 	}
 	.jewellery__subtitle {
-		margin-bottom: 0;
+		margin: 0;
 		font-size: 24px;
 		align-self: flex-start;
 	}
