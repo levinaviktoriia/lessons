@@ -9,6 +9,9 @@
 body {
 	font-family: "Inter", sans-serif;
 }
+.menu-open body{
+	overflow: clip;
+}
 .wrapper {
 	overflow: clip;
 	min-height: 100%;
