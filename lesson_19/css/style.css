@@ -12,6 +12,9 @@ body {
 	font-size: 18px;
 	color: #3c4242;
 }
+.menu-open body{
+	overflow: clip;
+}
 .wrapper {
 	overflow: clip;
 	min-height: 100%;
