@@ -13,7 +13,7 @@ body {
 	color: #3c4242;
 }
 .menu-open body{
-	overflow: clip;
+	overflow: hidden;
 }
 .wrapper {
 	overflow: clip;
