@@ -295,11 +295,27 @@ body {
 }
 @media (max-width: 550px) {
 	.header__form {
-		display: none;
+		position: fixed;
+		width: 100%;
+		height: 44px;
+		top: 75px;
+		left: 100%;
+		padding: 0 20px;
+		transition: all 0.2s;
+		flex-basis: 100%;
+	}
+	.menu-open .header__form{
+		left: 0;
+	}
+	.header__btn {
+		left: 30px;
+	}
+	.header__input {
+		padding: 0 20px 0 40px;
 	}
 	.menu__body {
-		padding-top: 70px;
-	}
+		padding-top: 125px;
+  }
 }
 @media (max-width: 400px) {
 	.header__logo {
@@ -322,7 +338,7 @@ body {
 		top: 10px;
 	}
 	.actions-header__icon-menu::after {
-		bottom: 11px;
+		bottom: 10px;
 	}
 }
 /* ================================================================ */
