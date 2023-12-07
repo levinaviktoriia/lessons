@@ -252,6 +252,7 @@ body {
 		width: 100%;
 		top: 75px;
 		left: 100%;
+		z-index: 2;
 		background-color: #bebcbd;
 		transition: all 0.2s;
 	}
@@ -300,11 +301,11 @@ body {
 		height: 44px;
 		top: 75px;
 		left: 100%;
-		padding: 0 20px;
+		padding: 0px 20px;
 		transition: all 0.2s;
 		flex-basis: 100%;
 	}
-	.menu-open .header__form{
+	.menu-open .header__form {
 		left: 0;
 	}
 	.header__btn {
@@ -315,7 +316,10 @@ body {
 	}
 	.menu__body {
 		padding-top: 125px;
-  }
+	}
+	.menu__body::after {
+		height: 119px;
+	}
 }
 @media (max-width: 400px) {
 	.header__logo {
