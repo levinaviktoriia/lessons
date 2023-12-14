@@ -1,0 +1,534 @@
+// Обнулення---------------------------------------------
+@import "_reset.scss";
+// Шрифти------------------------------------------------
+@import "_fonts.scss";
+
+
+// * Основні стилі---------------------------------------
+body{
+	background-color: #FFF9F4;
+	color: #000;
+	.menu-open &{
+		overflow: hidden;
+	}
+}
+ 
+.wrapper{
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> main{
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"]{
+	max-width: 1230px;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+// *-----------------------------------------------------
+.header {
+	background-color: #FFF9F4;
+	font-family: "Merriweather", sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	&::after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 5;
+		width: 100%;
+		height: 1px;
+		background-color: rgba(131, 131, 131, 0.21);
+	}
+	// .header__container
+	&__container {
+		min-height: 106px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 30px;
+		@media (max-width: 991.98px){
+			min-height: 65px;
+		}
+		@media (max-width: 767.98px){
+			min-height: 40px;
+			column-gap: 15px;
+		}
+		@media (max-width: 400px){
+			column-gap: 7px;
+		}
+	}
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 5;
+		flex: 0 0 184px;
+		font-size: 30px;
+		font-style: italic;
+		font-weight: 700;
+		line-height: 1.2;
+		@media (max-width: 767.98px){
+			font-size: 26px;
+			flex-basis: auto;
+		}
+		@media (max-width: 400px){
+			font-size: 24px;
+		}
+	}
+	// .header__link
+	&__link {
+		position: relative;
+		z-index: 5;
+		min-width: 120px;
+		flex-shrink: 0;
+		@media (max-width: 991.98px){
+			min-width: 0;
+		}
+		@media (max-width: 400px){
+			height: 38px;
+			width: 50px;
+			span{
+				display: none;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				height: 22px;
+				width: 20px;
+				background: url('../img/user-solid.svg') center / cover no-repeat;
+			}
+		}	
+	}
+	// .header__icon-menu
+	&__icon-menu {
+		display: none;
+		@media (max-width: 991.98px){
+			position: relative;
+			z-index: 5;
+			display: block;
+			height: 38px;
+			width: 50px;
+			border-radius: 5px;
+			background-color: #0E333D;
+			
+			&::before,
+			&::after,
+			& span{
+				content: '';
+				position: absolute;
+				left: 10px;
+				width: 30px;
+				height: 2px;
+				border-radius: 3px;
+				background-color: #fff;
+				transition: all .2s;
+			}
+			&::before{
+				top: 10px;
+			}
+			&::after{
+				bottom: 10px;
+			}
+			& span{
+				top: 50%;
+				margin-top: -1px;
+			}
+		}
+		.menu-open &{
+			&::before{
+				transform: rotate(45deg);
+				top: 50%;
+			}
+			&::after{
+				transform: rotate(-45deg);
+				top: 50%;
+			}
+			& span{
+				transform: scale(0);
+			}
+		}
+	}
+}
+.menu {
+	flex-grow: 1;
+	// .menu__body
+	&__body {
+		@media (max-width: 991.98px){
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 100%;
+			overflow: auto;
+			background-color: #FFF9F4;
+			padding: 90px 15px 15px;
+			transition: left .2s;
+			.menu-open &{
+				left: 0;
+			}
+		}
+		@media (max-width: 767.98px){
+			padding: 60px 15px 15px;
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 36px;
+		row-gap: 7px;
+		justify-content: center;
+		@media (max-width: 1050px){
+			column-gap: 25px;
+		}
+		@media (max-width: 991.98px){
+			flex-direction: column;
+		}
+	}
+	// .menu__item
+	&__item {
+		@media (any-hover: hover){
+			&:hover .menu__link{
+				text-decoration-color: #000;
+				text-shadow: 0px 0px 0.7px #000;
+			}
+		}
+		@media (max-width: 991.98px){
+			text-align: right;
+		}
+	}
+	// .menu__item--active
+	&__item--active {
+
+	}
+	// .menu__link
+	&__link {
+		font-size: 20px;
+		font-weight: 400;
+		transition: all .2s;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+
+		.menu__item--active &{
+			font-weight: 700;
+			text-decoration: underline;
+		}
+		.menu__item--submenu &{
+			display: flex;
+			align-items: center;
+			column-gap: 4px;
+			&::after{
+				content: '';
+				flex: 0 0 16px;
+				width: 16px;
+				height: 8px;
+				background: url('../img/arrow.png') center / cover no-repeat;
+				transition: transform .2s;
+			}
+		}
+		@media (max-width: 991.98px){
+			padding: 5px 0;
+			font-size: 26px;
+			.menu__item--submenu &{
+				display: block;
+				&::after{
+					display: none;
+				}
+			}
+		}
+	}
+	// .menu__item--submenu
+	&__item--submenu {
+		position: relative;
+		&:hover .submenu{
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0px);
+			pointer-events: all;
+		}
+		&:hover .menu__link::after {
+			transform: rotate(-180deg);
+		}
+	}
+}
+.submenu {
+	position: absolute;
+	top: 100%;
+	left: -20px;
+	padding-top: 45px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(15px);
+	transition: all .2s;
+	pointer-events: none;
+	@media (max-width: 991.98px){
+		position: static;
+		left: 0;
+		padding-top: 10px;
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0px);
+	}
+	// .submenu__list
+	&__list {
+		background-color: #0E333D;
+		padding: 15px;
+		border-radius: 5px;
+	}
+	// .submenu__item
+	&__item {
+		color: #fff;
+		font-size: 18px;
+		line-height: 1.2;
+		&:not(:last-child){
+			margin-bottom: 10px;
+		}
+		@media (any-hover: hover){
+			&:hover .submenu__link{
+				border-bottom: 1.5px solid #fff;
+			}
+		}
+		@media (max-width: 991.98px){
+			font-size: 22px;
+		}
+	}
+	// .submenu__link
+	&__link {
+		padding: 5px 0;
+		transition: all .2s;
+		border-bottom: 1.5px solid transparent;
+	}
+}
+.button {
+	border-radius: 5px;
+	background-color: #0E333D;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	padding: 13px 15px;
+	text-align: center;
+	@media (max-width: 991.98px){
+		padding: 10px 15px;
+		font-size: 18px;
+	}
+}
+
+// ------------------------------------------------------
+.jewellery {
+	font-family: "Cormorant Infant", sans-serif;
+	padding: 175px 0 75px;
+	
+	@media (max-width: 991.98px){
+		padding: 130px 0 50px;
+	}
+	@media (max-width: 767.98px){
+		padding: 80px 0 50px;
+	}
+	@media (max-width: 400px){
+		padding: 70px 0 30px;
+	}
+
+	// .jewellery__headers
+	&__headers {
+		max-width: 750px;
+		margin: 0 auto;
+		text-align: center;
+		&:not(:last-child){
+			margin-bottom: 128px;
+		}
+		@media (max-width: 1200px){
+			&:not(:last-child){
+				margin-bottom: 80px;
+			}
+		}
+		@media (max-width: 991.98px){
+			&:not(:last-child){
+				margin-bottom: 50px;
+			}
+		}
+		@media (max-width: 600px){
+			&:not(:last-child){
+				margin-bottom: 20px;
+			}
+		}
+	}
+	// .jewellery__title
+	&__title {
+		color: #0E333D;
+		font-family: "DM Serif Text", sans-serif;
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 1.27;
+		text-transform: capitalize;
+		&:not(:last-child){
+			margin-bottom: 29px;
+		}
+		@media (max-width: 991.98px){
+			&:not(:last-child){
+				margin-bottom: 20px;
+			}
+		}
+		@media (max-width: 767.98px){
+			font-size: 36px;
+			&:not(:last-child){
+				margin-bottom: 15px;
+			}
+		}
+		@media (max-width: 600px){
+			font-size: 26px;
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+		}
+	}
+	// .jewellery__text
+	&__text {
+		color: #8C8B8A;
+		font-family: "Raleway", sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.27; 
+		& p:not(:last-child){
+			margin-bottom: 5px;
+		}
+		@media (max-width: 600px){
+			font-size: 18px;
+		}
+	}
+	// .jewellery__box
+	&__box {
+		@media (min-width: 850px){
+			display: flex;
+			column-gap: 3%;
+		}
+	}
+	// .jewellery__decor-image
+	&__decor-image {
+		display: none;
+		@media (min-width: 850px){
+			display: block;
+			flex-basis: 33%;
+			position: relative;
+			img{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	// .jewellery__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 30px;
+		row-gap: 47px;
+		@media (min-width: 850px){
+			flex-basis: 64%;
+		}
+		@media (max-width: 1024px){
+			gap: 30px;
+		}
+		@media (max-width: 600px){
+			gap: 15px;
+		}
+		@media (max-width: 400px){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+.item-product {
+	display: flex;
+	flex-direction: column;
+
+	// .item-product__image
+	&__image {
+		border-radius: 5px;
+		overflow: hidden;
+		transition: border-radius .2s;
+		&:not(:last-child){
+			margin-bottom: 17px;
+		}
+		img{
+			aspect-ratio: 369 / 278;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	// .item-product__name
+	// .item-product__price
+	&__name,
+	&__price {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.40;
+		transition: text-decoration-color 0.2s;
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		text-decoration-thickness: 1px;
+	}
+	&__name {
+		flex-grow: 1;
+		&:not(:last-child){
+			margin-bottom: 4px;
+		}
+	}
+	@media (any-hover: hover){
+		&:hover &__name,
+		&:hover &__price{
+			text-decoration-color: #000;
+		}
+		&:hover &__image{
+			border-radius: 20px;
+		}
+	}
+	@media (max-width: 600px){
+		&__image {
+			&:not(:last-child){
+				margin-bottom: 8px;
+			}
+		}
+		&__name,
+		&__price {
+			font-size: 20px;
+		}
+		&__name {
+			&:not(:last-child){
+				margin-bottom: 0px;
+			}
+		}
+	}
+	@media (max-width: 480px){
+		&__name,
+		&__price {
+			font-size: 18px;
+		}
+	}
+}
+
+// -----------------------------------------------------
+.footer {
+	padding: 30px 0;
+	border-top: 1px solid rgba(131, 131, 131, 0.21);
+	font-family: "Cormorant Infant", sans-serif;
+	font-size: 24px;
+	text-align: center;
+	@media (max-width: 600px){
+		font-size: 20px;
+		padding: 20px 0;
+	}
+}
