@@ -1,0 +1,174 @@
+// *Переменные---------------------------------------
+$mainColor: #0d0630;
+$hoverColor: #5a5a5a;
+$bgColor: #384e77;
+$lightColor: #e6f9af;
+
+// Обнулення---------------------------------------------
+@import "_reset.scss";
+// Шрифти------------------------------------------------
+@import "_fonts.scss";
+// Компоненти--------------------------------------------
+@import "_common.scss";
+@import "_header.scss";
+
+
+// * Основні стилі---------------------------------------
+
+
+body{
+	background-color: $bgColor;
+	color: $mainColor;
+	font-family: "Jost", sans-serif;
+	font-size: 18px;
+		.menu-open &{
+		overflow: hidden;
+	}
+}
+.wrapper{
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> main{
+		flex-grow: 1;
+	}
+}
+[class*="__container"]{
+	max-width: 1230px;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.page {
+}
+// *-----------------------------------------------------
+
+.block {
+	padding: 50px 0;
+		// .block__container
+		&__container {
+		}
+		&__lesson{
+			&:not(:last-child){
+				margin-bottom: 20px;
+			}
+		}
+		@media (max-width: 767.98px){
+			padding: 75px 0 50px;
+		}
+}
+.lesson {
+	background-color: $lightColor;
+	border: 1px solid $mainColor;
+	border-radius: 10px;
+	&>*{
+		padding: 10px 40px;
+	}
+	@media (max-width: 767.98px){
+		&>*{
+			padding: 10px 15px;
+		}
+	}
+		// .lesson__title
+		&__title {
+			text-align: center;
+			font-size: 30px;
+			font-weight: 600;
+			line-height: 1.2;
+			span{
+				font-weight: 800;
+			}
+			&:not(:last-child){
+				border-bottom: 1px solid $mainColor;
+			}
+			@media (max-width: 767.98px){
+				font-size: 22px;
+			}
+		}
+		// .lesson__links
+		&__links {
+			display: flex;
+			gap: 20px;
+			justify-content: center;
+			&:not(:last-child){
+				border-bottom: 1px solid $mainColor;
+			}
+		}
+		// .lesson__column
+		&__column {
+			flex-basis: 50%;
+			text-align: center;
+		}
+		// .lesson__link
+		&__link {
+			font-size: 20px;
+			line-height: 1.2;
+			font-weight: 600;
+			transition: all .2s;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			@media (any-hover:hover){
+				&:hover{
+					color: $hoverColor;
+					text-decoration-color: $hoverColor;
+				}
+			}
+			@media (max-width: 767.98px){
+				font-size: 18px;
+			}
+		}
+		// .lesson__comment
+		&__comment {
+		}
+		// .lesson__link-comment
+		&__link-comment {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			column-gap: 20px;
+			font-size: 28px;
+			font-weight: 600;
+			line-height: 1.2;
+			padding: 0px 10px;
+			transition: all .2s;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			&::after{
+				content: '';
+				width: 30px;
+				height: 20px;
+				flex: 0 0 30px;
+				background: url('../img/arrow.svg') center / cover no-repeat;
+			}
+			@media (any-hover:hover){
+				&:hover{
+					color: $hoverColor;
+					text-decoration-color: $hoverColor;
+				}
+			}
+			@media (max-width: 767.98px){
+				font-size: 20px;
+			}
+		}
+		// .lesson__content
+		&__content {
+			padding-top: 20px;
+			font-size: 20px;
+			line-height: 1.2;
+			visibility: hidden;
+			display: none;
+			transition: all .4s;
+			text-align: justify;
+			p:not(:last-child){
+				margin-bottom: 5px;
+			}
+			span{
+				font-weight: 700;
+			}
+			&:target{
+				visibility: visible;
+				display: block;
+			}
+		}
+}
