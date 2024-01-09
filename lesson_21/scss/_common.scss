@@ -1,0 +1,88 @@
+
+.card-product {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	@media (max-width: $tablet){
+		row-gap: 10px;
+	}
+	// .card-product__image
+	&__image {
+		border-radius: 10px;
+		overflow: hidden;
+		width: 100%;
+		img{
+			height: 100%;
+			width: 100%;
+			aspect-ratio: 270 / 393;
+			object-fit: cover;
+			transition: 0.2s;
+		}
+		@media (any-hover: hover) {
+			&:hover img{
+				transform: scale(1.02);
+			}
+		}
+	}
+	// .card-product__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 20px;
+		flex-grow: 1;
+	}
+	// .card-product__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 5px;
+		height: 100%;
+	}
+	// .card-product__name
+	&__name {
+		flex-grow: 1;
+		color: $darkGrayColor;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: -0.715px;
+	}
+	// .card-product__link-name
+	&__link-name {
+		@include underline(transparent, 1px);
+		transition: text-decoration-color .2s;
+		@media (any-hover: hover) {
+			.card-product__name:hover &{
+				text-decoration-color: $darkGrayColor;
+			}
+		}
+	}
+	// .card-product__text
+	&__text {
+		color: $grayColor;
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 1.22;
+		letter-spacing: -0.536px;
+	}
+	// .card-product__arrow
+	&__arrow {
+		flex: 0 0 18px;
+		height: 25px;
+		background: url('../img/icons/arrow.svg') center / contain no-repeat;
+		@media (any-hover: hover) {
+			.card-product:hover &{
+				animation: arrow-link .5s linear infinite alternate;
+			}
+		}
+	}
+}
+@keyframes arrow-link {
+	0%{
+		transform: translateX(0px);
+	}
+	100%{
+		transform: translateX(-5px);
+	}
+}
