@@ -1,0 +1,34 @@
+// Обнулення---------------------------------------------
+@import "_reset.scss";
+// Шрифти------------------------------------------------
+@import "_fonts.scss";
+// Компоненти--------------------------------------------
+@import "_common.scss";
+
+// * Основні стилі---------------------------------------
+body{
+}
+
+// .menu-open body{
+// 	overflow: hidden;
+// }
+   
+.wrapper{
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> main{
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"]{
+	max-width: 1250px;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+// *-----------------------------------------------------
+
+
