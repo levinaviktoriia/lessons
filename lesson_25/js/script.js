@@ -72,9 +72,11 @@ if(button){ // якщо кнопка існує, відбудеться скро
 пофарбувати колір тексту посилання в червоний
 */
 const link = document.querySelector(`.link`)
-link.dataset.number = 100  // Додали data-атрибут : data-number="100"
-let number = parseFloat(link.dataset.number) // Отримали значення атрибуту. Також працює:   let number = link.getAttribute(`number`)
-if(number < 200){
-	link.style.color = `red`
+if(link){
+	link.dataset.number = 100  // Додали data-атрибут : data-number="100"
+	let number = parseFloat(link.dataset.number) // Отримали значення атрибуту. Також працює:   let number = link.getAttribute(`number`)
+	if(number < 200){
+		link.style.color = `red`
+	}
+	// number < 200 ? link.style.color = `red` : null
 }
-// number < 200 ? link.style.color = `red` : null
