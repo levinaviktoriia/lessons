@@ -56,12 +56,13 @@ if(itemBlocks.length){ // якщо колекція поверне true (хоч�
 Дано в html: текст, далі кнопка з класом button.
 Треба прокрутити скрол сторінки до кнопки
 */
-const button = document.querySelector(`.button`) 
-button.scrollIntoView({
-	block: "start",
-	inline: "center",
-	behavior: "smooth"
-})
+const button = document.querySelector(`.button`) // шукаємо кнопку з класом-.button та отримуємо в константу - button
+if(button){ // якщо кнопка існує, відбудеться скрол
+	button.scrollIntoView({
+		block: "start",
+		behavior: "smooth"
+	})
+}
 
 // ? Задача №6
 /* 
