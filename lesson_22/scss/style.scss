@@ -500,7 +500,7 @@ body{
 		&:not(:last-child){
 			margin-bottom: toRem(20);
 			@media (max-width: toEm($phoneWidth)){
-				margin-bottom: 10;
+				margin-bottom: toRem(10);
 			}
 		}
 		.headers__title{

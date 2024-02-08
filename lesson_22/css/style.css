@@ -1293,7 +1293,7 @@ body {
 }
 @media (max-width: 47.99875em) {
   .hero__headers:not(:last-child) {
-    margin-bottom: 10;
+    margin-bottom: 0.625rem;
   }
 }
 .hero__headers .headers__title {
