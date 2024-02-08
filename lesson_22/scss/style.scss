@@ -1001,6 +1001,8 @@ body{
 		flex-basis: 25%;
 		aspect-ratio: 434 / 501;
 		object-fit: cover;
+		@include adaptiveValue("padding-left", 20, 5, 0, $maxWidth, $phoneWidth);
+		@include adaptiveValue("padding-right", 20, 5,  0, $maxWidth, $phoneWidth);
 		@media (max-width: toEm($tabletWidth)){
 			flex-basis: 50%;
 		}
@@ -1008,15 +1010,11 @@ body{
 			flex-basis: 100%;
 		}
 		img{
-			@include adaptiveValue("padding-left", 20, 5, 0, $maxWidth, $phoneWidth);
-			@include adaptiveValue("padding-right", 20, 5,  0, $maxWidth, $phoneWidth);
 			height: 100%;
 			width: 100%;
 		}
 	}
 }
-
-
 
 // *FOOTER-----------------------------------------------------
 .footer {
