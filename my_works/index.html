@@ -364,15 +364,22 @@
 						<div class="lesson__links">
 							<div class="lesson__column">
 								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=A7EWddQ9BBI&ab_channel=YevhenAndrikanych">Ссылка на урок</a>
+								<a class="lesson__link" target="_blank"  href="https://www.youtube.com/watch?v=P4EgTuQzgd8">Дополнительно (columns)</a>
 							</div>
 							<div class="lesson__column">
 								<a class="lesson__link" target="_blank" href="https://levinaviktoriia.github.io/lessons/lesson_22/">Домашняя работа</a>
 							</div>
 						</div>
-						<!-- <div class="lesson__comment">
-							<a href="#lesson-21" class="lesson__link-comment">Замечание</a>
-							<div id="lesson-21" class="lesson__content"></div>
-						</div> -->
+						<div class="lesson__comment">
+							<a href="#lesson-22" class="lesson__link-comment">Замечание</a>
+							<div id="lesson-22" class="lesson__content">
+								<p><span>скрін-1</span> для посилань і кнопок в котрих нема тексту варто додавати атрибут aria-label для опису цих посилань і кнопок, до прикладу для посилання з іконкою інстаграму можна додати підпис: aria-label="link to instagram"</p>
+								<p><span>скрін-2</span> помилки у валідаторі</p>
+								<p><span>скрін-3</span>aspect-ratio не працює з абсолютно позиціонованими елементами.</p>
+								<p><span>скрін-4</span>варто збільшити відступи між пунктами, хоча б до 16px</p>
+								<p><span>скрін-5</span>не варто робити таких маленьких відступів, у вас є багато вільного простору, тому краще збільшити відступи щоб не було можливості випадково натиснути на дві іконки. Згадуємо історію про великі пальці.</p>
+							</div>
+						</div>
 					</div>
 					<div class="block__lesson lesson" id="less-23">
 						<h2 class="lesson__title"><span>Урок №23.</span> JavaScript. Часть №1</h2>
@@ -442,8 +449,55 @@
 						<div class="lesson__comment">
 							<a href="#lesson-26" class="lesson__link-comment">Замечание</a>
 							<div id="lesson-26" class="lesson__content">
-								<p><span></span></p>
-								<p><span></span></p>
+								<p><span>1 скрин</span> Могли вынести раньше это в константу и проверять ее в условии const itemClick = e.target.closest('.item')</p>
+								<img src="img/26.1.png" alt="">
+								<p><span>2 скрин</span> У вас тут так много вложенностей и if ... else) Можно немного переделать код так, чтобы он проще читался </p>
+								<img src="img/26.2.png" alt="">
+								<p>Обратите внимание на то, что событие mousemove - движение мыши, а не появление его над каки-то элементом) Также у этого события есть один маленький нюанс</p>
+								<p>Событие mousemove происходит при движении мыши. Однако, это не означает, что указанное событие генерируется при прохождении каждого пикселя.
+									Браузер периодически проверяет позицию курсора и, заметив изменения, генерирует события mousemove.
+									Это означает, что если пользователь двигает мышкой очень быстро, то некоторые DOM-элементы могут быть пропущены.</p>
+									<a href="https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave#propusk-elementov">Источник</a>
+								<p><span>3 скрин</span>Вы хотите перестать выполнять колбэк с помощью переменной, но есть одно НО) За элементом слежка будет продолжаться, что будет нагружать сайт немного) Есть метод у этого класса `unobserve(element)`, где вы можете прекратить слежку за данным объектом насовсем и не нужно будет придумывать то, что уже есть) Но выкрутились из ситуации классно)</p>
+								<p><span>4 скрин</span>Почему именно `parseFloat`?) Мы будем получать целое число, а не с плавающей точкой) </p>
+								<p><span>5 скрин</span>Можно использовать константы)</p>
+							</div>
+						</div>
+					</div>
+					<div class="block__lesson lesson" id="less-26">
+						<h2 class="lesson__title"><span>Урок №27-35.</span> Практика</h2>
+						<div class="lesson__links">
+							<div class="lesson__column">
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=HzzImb20RUA&ab_channel=YevhenAndrikanych"> Часть 1</a>
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=x7pXa8Q2twI&ab_channel=YevhenAndrikanych">Часть 2</a>
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=W5-H_P_J9Yw&ab_channel=YevhenAndrikanych">Часть 3</a>
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=nxC7SDPSxVM&ab_channel=YevhenAndrikanych">Часть 4</a>
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=YJlYDYhl3aw&ab_channel=YevhenAndrikanych">Часть 5</a>
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=vn4l9-7p0Tg&ab_channel=YevhenAndrikanych">Часть 6</a>
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=dOYhLDjaQGs&ab_channel=YevhenAndrikanych">Часть 7</a>
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=SEa30flsEI0&ab_channel=YevhenAndrikanych">Часть 8</a>
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=uVJ8AuO18rQ&ab_channel=YevhenAndrikanych">Часть 9</a>
+							</div>
+						</div>
+					</div>
+					<div class="block__lesson lesson" id="less-26">
+						<h2 class="lesson__title"><span>Шаблон. Выпускной</span></h2>
+						<div class="lesson__links">
+							<div class="lesson__column">
+								<a class="lesson__link" target="_blank" href="https://www.youtube.com/watch?v=Pbkt-awZivg&ab_channel=YevhenAndrikanych">Ссылка на урок</a>
+								<p>Для запуска шаблона</p>
+								<a target="_blank" href="https://nodejs.org/en">https://nodejs.org/en</a>
+								<a target="_blank" href="https://git-scm.com/">https://git-scm.com/</a>
+								<p>В терміналі:</p>
+									<p>Один раз пишемо --- npm i gulp-cli -g - установка gulp глобально</p>
+									<p>Кожен раз для нового проєку --- npm i - установка нового проєкту </p>
+									<p>Кожен раз для роботи з шаблоном:</p>
+									<p>Режим розробника. Команда запуску npm run dev</p>
+									<p>Режим продакшену. Команда запуску npm run build</p>
+									<p>Режим продакшена та надсилання результату на сервер по FTP. Команда запуску npm run deploy</p>
+									<p>Режим продакшена та створення ZIP-архіву з результатом. Команда запуску npm run zip</p>
+									<p>Режим продакшена без створення WEBP зображень та дій пов’язаних із цим форматом. Команда запуску npm run devbuild</p>
+									<p>Для зупинки команди - контрол + С (Ctrl+C)</p>
 							</div>
 						</div>
 					</div>

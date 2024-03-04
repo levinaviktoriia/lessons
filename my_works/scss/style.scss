@@ -97,8 +97,18 @@ body{
 		}
 		// .lesson__column
 		&__column {
+			flex-grow: 1;
 			flex-basis: 50%;
 			text-align: center;
+			p{
+				text-align: left;
+				&:not(:last-child) {
+					margin-bottom: 8px;
+				}
+			}
+			a{
+				display: block;
+			}
 		}
 		// .lesson__link
 		&__link {
